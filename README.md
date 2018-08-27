@@ -1,2 +1,2 @@
-# dotfiles
-🔥My configuration dotfiles
+# 🔥 My Dotfiles
+See here all my used dotfiles
