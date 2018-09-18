@@ -50,7 +50,7 @@ COMPLETION_WAITING_DOTS="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(ranger zsh-nvm tmux git sublime code git-extras heroku nvm extract last-working-dir zsh-better-npm-completion docker)
+plugins=(ranger zsh-nvm tmux git sublime code git-extras heroku nvm extract last-working-dir zsh-better-npm-completion docker fzf)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -76,6 +76,27 @@ alias vhosts="st /etc/apache2/extra/httpd-vhosts.conf"
 alias hosts="st /etc/hosts"
 # Generate an random password on the shell
 alias password="openssl rand -base64 32"
+# aliased bat to the cat command
+alias cat='bat'
+# aliased prettyping to the classic ping command
+alias ping='prettyping --nolegend'
+#
+# alias preview="fzf --preview 'bat --color \"always\" {}'"
+alias preview="fzf --preview 'bat --color \"always\" {}'"
+#
+#export FZF_DEFAULT_OPTS=" --preview 'bat --color \"always\" {}'"
+#
+alias edit='subl $(preview)'
+#
+# export FZF_DEFAULT_OPTS="--bind='ctrl-o:execute(code {})+abort'"
+#
+alias top="htop"
+#
+# alias du="ncdu --color dark -rr -x --exclude .git --exclude node_modules"
+alias du="ncdu --color dark -rr -x"
+
+#
+alias py="python3"
 
 
 ## TAR Tooling
