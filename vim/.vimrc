@@ -2,7 +2,6 @@ set nocompatible
 set encoding=utf-8 nobomb
 filetype off
 
-
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
