@@ -4,12 +4,9 @@ LC_ALL=en_US.UTF-8
 
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
+
 # Path to supercharged profile.
 SUPERCHARGED=$HOME/.dotfiles
-
-export NVM_DIR="$HOME/.nvm"
-source $(brew --prefix nvm)/nvm.sh
-for f in $SUPERCHARGED/oh-my-zsh/aliases/*; do source $f; done
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -57,6 +54,8 @@ plugins=(ranger zsh-nvm tmux git sublime code git-extras heroku nvm extract last
 
 source $ZSH/oh-my-zsh.sh
 
+# Load all Supercharged aliases
+for f in $SUPERCHARGED/oh-my-zsh/aliases/*; do source $f; done
 
 ### User configuration
 export PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -102,4 +101,6 @@ fpath=(/usr/local/share/zsh-completions $fpath)
 # fi
 
 # This loads nvm bash_completion
+export NVM_DIR="$HOME/.nvm"
+source $(brew --prefix nvm)/nvm.sh
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
