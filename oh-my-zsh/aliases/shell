@@ -27,3 +27,5 @@ alias du="ncdu --color dark -rr -x"
 
 #
 alias py="python3"
+
+alias zshreload="source ~/.zshrc"
