@@ -4,11 +4,12 @@ LC_ALL=en_US.UTF-8
 
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
+# Path to supercharged profile.
 SUPERCHARGED=$HOME/.dotfiles
 
 export NVM_DIR="$HOME/.nvm"
 source $(brew --prefix nvm)/nvm.sh
-source $SUPERCHARGED/oh-my-zsh/aliases/servers
+for f in $SUPERCHARGED/oh-my-zsh/aliases/*; do source $f; done
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
