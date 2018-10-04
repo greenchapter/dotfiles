@@ -7,6 +7,7 @@ ZSH=$HOME/.oh-my-zsh
 
 export NVM_DIR="$HOME/.nvm"
 source $(brew --prefix nvm)/nvm.sh
+source ~/.zshaliasesrc
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
