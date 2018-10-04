@@ -71,36 +71,6 @@ export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/b
 export PS1='%{$fg_bold[green]%}%n@localhost%{$reset_color%} %{$fg_bold[blue]%}%2~%{$reset_color%} $(my_git_prompt_info)%{$reset_color%}%B»%b '
 
 
-## Shell Aliases
-alias zshconfig="st ~/.zshrc"
-alias tconfig="st ~/.tmux.conf"
-alias zshenv="st ~/.zshenv"
-alias vhosts="st /etc/apache2/extra/httpd-vhosts.conf"
-alias hosts="st /etc/hosts"
-# Generate an random password on the shell
-alias password="openssl rand -base64 32"
-# aliased bat to the cat command
-alias cat='bat'
-# aliased prettyping to the classic ping command
-alias ping='prettyping --nolegend'
-#
-# alias preview="fzf --preview 'bat --color \"always\" {}'"
-alias preview="fzf --preview 'bat --color \"always\" {}'"
-#
-#export FZF_DEFAULT_OPTS=" --preview 'bat --color \"always\" {}'"
-#
-alias edit='subl $(preview)'
-#
-# export FZF_DEFAULT_OPTS="--bind='ctrl-o:execute(code {})+abort'"
-#
-alias top="htop"
-#
-# alias du="ncdu --color dark -rr -x --exclude .git --exclude node_modules"
-alias du="ncdu --color dark -rr -x"
-
-#
-alias py="python3"
-
 
 ## TAR Tooling
 alias pack='f() { tar -cvf $1.tar $1};f'
