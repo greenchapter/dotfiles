@@ -98,9 +98,10 @@ fi
 # This loads nvm bash_completion
 export NVM_DIR="$HOME/.nvm"
 source $(brew --prefix nvm)/nvm.sh
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
-# Wasmer
-export WASMER_DIR="$HOME/.wasmer"
-[ -s "$WASMER_DIR/wasmer.sh" ] && source "$WASMER_DIR/wasmer.sh"  # This loads wasmer
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/Thomas/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/Thomas/Downloads/google-cloud-sdk/path.zsh.inc'; fi
 
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/Thomas/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/Thomas/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
