@@ -10,6 +10,11 @@ The Supercharged Pro Theme use the font **Source Code Pro Powerline** Font, you 
 
 ## tmux
 The fully supported usage of tmux need to install the homebrew package **reattach-to-user-namespace** `brew install reattach-to-user-namespace`.
+
 The config file is inspired by [Monorkins tmux dotfile](https://github.com/monorkin/dotfiles/blob/417fd14199a7470c5e924c0f5567b3987632047c/tmux.conf)😘
+
+Here some **special commands**
+
+* Reload Configuration with *prefix C-b **r***
 
 ## Vim
