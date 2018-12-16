@@ -18,4 +18,6 @@ Here some **special commands**
 * Reload Configuration with *prefix C-b **r***
 
 ## Vim
-    
+
+##### WebAssembly Command Line Support
+My dotfiles support wasmer binaries via CLI → [https://wasmer.io/](https://wasmer.io/)
