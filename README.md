@@ -1,6 +1,8 @@
 # 🔥 My Dotfiles
 See here all my used dotfiles
 
+to update these dotfiles use `upgrade_supercharged` on the command line.
+
 ## Sublime Text 3
 
 ## Terminal
