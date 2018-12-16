@@ -1,4 +1,4 @@
-# 🔥 My Dotfiles
+# My Supercharged Dotfiles
 See here all my used dotfiles
 
 to update these dotfiles use `upgrade_supercharged` on the command line.
