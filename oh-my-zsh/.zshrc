@@ -68,6 +68,7 @@ export NVM_LAZY_LOAD=true
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 # restyle the zsh prompt
 export PS1='%{$fg_bold[green]%}%n@localhost%{$reset_color%} %{$fg_bold[blue]%}%2~%{$reset_color%} $(my_git_prompt_info)%{$reset_color%}%B»%b '
+alias upgrade_supercharged='sh $SUPERCHARGED/tools/upgrade.sh'
 
 
 
