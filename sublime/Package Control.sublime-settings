@@ -18,6 +18,8 @@
 		"Sass",
 		"SublimeCodeIntel",
 		"SublimeLinter",
+		"SublimeLinter-contrib-sass-lint",
+		"SublimeLinter-tslint",
 		"Theme - City Lights",
 		"TypeScript",
 		"Vue Syntax Highlight"
