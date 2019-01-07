@@ -10,22 +10,15 @@ alias password="openssl rand -base64 32"
 alias cat='bat'
 # aliased prettyping to the classic ping command
 alias ping='prettyping --nolegend'
-#
-# alias preview="fzf --preview 'bat --color \"always\" {}'"
 alias preview="fzf --preview 'bat --color \"always\" {}'"
-#
-#export FZF_DEFAULT_OPTS=" --preview 'bat --color \"always\" {}'"
-#
 alias edit='subl $(preview)'
 #
 # export FZF_DEFAULT_OPTS="--bind='ctrl-o:execute(code {})+abort'"
 #
 alias top="htop"
-#
-# alias du="ncdu --color dark -rr -x --exclude .git --exclude node_modules"
 alias du="ncdu --color dark -rr -x"
-
-#
+alias l="exa -l"
+alias ll="exa -lga --git"
+alias lll="exa -Ta"
 alias py="python3"
-
 alias zshreload="source ~/.zshrc"
