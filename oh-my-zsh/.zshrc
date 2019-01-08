@@ -82,15 +82,12 @@ alias compress7z='f() { 7z a $1.7z $1 };f'
 alias npm-global="npm list -g --depth=0"
 alias npm-reset="rm -rf node_modules/ && npm cache clean --force && npm i"
 
-
 ## Docker Tooling
 # remove all docker related container and images
 alias docker-wipeout='docker container rm $(docker container ls -a -q) && docker image rm $(docker image ls -a -q) && docker image prune'
 
-
 ## Chrome
 alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
-
 
 fpath=(/usr/local/share/zsh-completions $fpath)
 
@@ -104,7 +101,6 @@ fpath=(/usr/local/share/zsh-completions $fpath)
 # This loads nvm bash_completion
 export NVM_DIR="$HOME/.nvm"
 source $(brew --prefix nvm)/nvm.sh
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
 # Wasmer
 export WASMER_DIR="$HOME/.wasmer"
