@@ -50,7 +50,7 @@ COMPLETION_WAITING_DOTS="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(ranger zsh-nvm tmux git sublime code git-extras heroku nvm extract last-working-dir zsh-better-npm-completion docker fzf)
+plugins=(ranger tmux git sublime code git-extras heroku nvm extract last-working-dir zsh-better-npm-completion docker fzf)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -62,50 +62,45 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 export MANPATH="/usr/local/man:$MANPATH"
 # SSH private key path
 export SSH_KEY_PATH="~/.ssh/rsa_id"
-# activate NVM lazy loading
-export NVM_LAZY_LOAD=true
+# deactivate NVM lazy loading
+export NVM_LAZY_LOAD=false
 # Add Visual Studio Code to the prompt
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 # restyle the zsh prompt
 export PS1='%{$fg_bold[green]%}%n@localhost%{$reset_color%} %{$fg_bold[blue]%}%2~%{$reset_color%} $(my_git_prompt_info)%{$reset_color%}%B»%b '
 alias upgrade_supercharged='sh $SUPERCHARGED/tools/upgrade.sh'
 
-
-
 ## TAR Tooling
 alias pack='f() { tar -cvf $1.tar $1};f'
 alias compress='f() { tar -cvzf $1.tgz $1};f'
 alias compress7z='f() { 7z a $1.7z $1 };f'
 
-
-## NPM Tooling
+# NPM Tooling
 alias npm-global="npm list -g --depth=0"
 alias npm-reset="rm -rf node_modules/ && npm cache clean --force && npm i"
 
-
-## Docker Tooling
+# Docker Tooling
 # remove all docker related container and images
 alias docker-wipeout='docker container rm $(docker container ls -a -q) && docker image rm $(docker image ls -a -q) && docker image prune'
 
-
-## Chrome
+# Chrome
 alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
-
 
 fpath=(/usr/local/share/zsh-completions $fpath)
 
-# # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+# Preferred editor for local and remote sessions
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='vim'
+else
+  export EDITOR='st'
+fi
 
 # This loads nvm bash_completion
 export NVM_DIR="$HOME/.nvm"
 source $(brew --prefix nvm)/nvm.sh
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
 # Wasmer
 export WASMER_DIR="$HOME/.wasmer"
 [ -s "$WASMER_DIR/wasmer.sh" ] && source "$WASMER_DIR/wasmer.sh"  # This loads wasmer
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
