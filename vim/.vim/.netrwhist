@@ -1,5 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
-let g:netrw_dirhist_1='/Users/Thomas/Applications'
-let g:netrw_dirhist_2='/Applications/Figma.app'
-let g:netrw_dirhist_3='/Applications/Figma.app/Contents'
