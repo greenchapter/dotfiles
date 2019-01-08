@@ -105,3 +105,7 @@ if [ -f '/Users/Thomas/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/User
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/Thomas/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/Thomas/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+
+# Wasmer
+export WASMER_DIR="$HOME/.wasmer"
+[ -s "$WASMER_DIR/wasmer.sh" ] && source "$WASMER_DIR/wasmer.sh"
