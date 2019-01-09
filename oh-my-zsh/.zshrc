@@ -50,7 +50,7 @@ COMPLETION_WAITING_DOTS="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(ranger tmux git sublime code git-extras heroku nvm extract last-working-dir zsh-better-npm-completion docker fzf)
+plugins=(ranger tmux git sublime code git-extras heroku nvm zsh-nvm extract last-working-dir zsh-better-npm-completion docker fzf)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -96,9 +96,9 @@ else
 fi
 
 # This loads nvm bash_completion
-export NVM_DIR="$HOME/.nvm"
-source $(brew --prefix nvm)/nvm.sh
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+  export NVM_DIR="$HOME/.nvm"
+  [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"
+  [ -s "/usr/local/opt/nvm/etc/bash_completion" ] && . "/usr/local/opt/nvm/etc/bash_completion"
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/Thomas/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/Thomas/Downloads/google-cloud-sdk/path.zsh.inc'; fi
