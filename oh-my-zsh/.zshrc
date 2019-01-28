@@ -92,7 +92,7 @@ fpath=(/usr/local/share/zsh-completions $fpath)
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
 else
-  export EDITOR='st'
+  export EDITOR='vim'
 fi
 
 # This loads nvm bash_completion
@@ -100,12 +100,12 @@ fi
   [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"
   [ -s "/usr/local/opt/nvm/etc/bash_completion" ] && . "/usr/local/opt/nvm/etc/bash_completion"
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/Thomas/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/Thomas/Downloads/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/Thomas/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/Thomas/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
-
 # Wasmer
 export WASMER_DIR="$HOME/.wasmer"
 [ -s "$WASMER_DIR/wasmer.sh" ] && source "$WASMER_DIR/wasmer.sh"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/thomas.ott/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/thomas.ott/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/thomas.ott/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/thomas.ott/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
