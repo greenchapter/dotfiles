@@ -1,0 +1,10 @@
+<snippet>
+	<content>
+<![CDATA[for (i = 0; i < 5; i++) {
+	console.log('👉🏻 ' + i);
+}]]>
+	</content>
+	<tabTrigger>fo</tabTrigger>
+	<scope>text.html,source.js</scope>
+	<description>for()</description>
+</snippet>
