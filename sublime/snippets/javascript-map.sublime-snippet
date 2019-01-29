@@ -1,0 +1,10 @@
+<snippet>
+	<content>
+<![CDATA[$1.map(function (element) {
+	console.log('👉🏻 ' + element);
+});$0]]>
+	</content>
+	<tabTrigger>ma</tabTrigger>
+	<scope>text.html,source.js</scope>
+	<description>map()</description>
+</snippet>
