@@ -3,6 +3,25 @@ See here all my used dotfiles
 
 to update these dotfiles use `upgrade_supercharged` on the command line.
 
+
+## Install
+
+On a fresh install of macOS, run:
+
+```
+sudo softwareupdate -i -a
+xcode-select --install
+```
+
+
+Then clone the repo and run `scripts/setup.sh`:
+
+```
+git clone https://github.com/greenchapter/dotfiles ~/.dotfiles
+source ~/.dotfiles/scripts/setup.sh
+```
+
+
 #### Alias Table
 | Alias  | Description |
 |--------|-------------|
