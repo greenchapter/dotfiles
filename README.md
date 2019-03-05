@@ -3,6 +3,21 @@ See here all my used dotfiles
 
 to update these dotfiles use `upgrade_supercharged` on the command line.
 
+#### Alias Table
+| Alias  | Description |
+|--------|-------------|
+|**zshconfig** |open oh-my-zsh main configuration in sublime|
+|**tconfig**|open tmux configuration in sublime|
+|**password**|generate a random password|
+|**preview**|open a fuzzy search with bat|
+|**edit**|open a fuzzy search and edit with sublime|
+|**l**|list in table|
+|**ll**|list in row|
+|**le**|list in table with exa|
+|**lle**|list in tree with exa|
+|**zshreload**|reload zsh shell|
+|**upgrade_global_npm**|switch nvm enviroment and update global npm packages|
+
 ## Sublime Text 3
 
 ## Terminal
