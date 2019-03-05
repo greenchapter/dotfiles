@@ -1,17 +1,13 @@
 ## Shell Aliases
 alias zshconfig="st ~/.zshrc"
 alias tconfig="st ~/.tmux.conf"
-alias zshenv="st ~/.zshenv"
-alias vhosts="st /etc/apache2/extra/httpd-vhosts.conf"
-alias hosts="st /etc/hosts"
 alias password="openssl rand -base64 32"
 alias cat='bat'
 alias ping='prettyping --nolegend'
 alias preview="fzf --preview 'bat --color \"always\" {}'"
-alias edit='subl $(preview)'
 alias top="htop"
 alias du="ncdu --color dark -rr -x"
-alias edit='mvim $(preview)'
+alias edit='st $(preview)'
 alias top="htop"
 alias du="ncdu --color dark -rr -x"
 alias l="ls -lahF"
@@ -20,3 +16,4 @@ alias le="exa -lga --git"
 alias lle="exa -Ta"
 alias py="python3"
 alias zshreload="source ~/.zshrc"
+alias upgrade_global_npm="nvm use system && npm-check -gu && nvm use default"
