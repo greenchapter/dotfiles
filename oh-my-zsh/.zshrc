@@ -109,3 +109,4 @@ if [ -f '/Users/thomas.ott/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/thomas.ott/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/thomas.ott/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+export PATH="/usr/local/sbin:$PATH"
