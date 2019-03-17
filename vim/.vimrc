@@ -12,6 +12,7 @@ Plugin 'hail2u/vim-css3-syntax'
 Plugin 'Raimondi/delimitMate'
 Plugin 'vim-airline/vim-airline'
 Plugin 'tpope/vim-commentary'
+Plugin 'scrooloose/nerdtree'
 
 filetype plugin indent on
 
