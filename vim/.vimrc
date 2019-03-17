@@ -13,6 +13,7 @@ Plugin 'Raimondi/delimitMate'
 Plugin 'vim-airline/vim-airline'
 Plugin 'tpope/vim-commentary'
 Plugin 'scrooloose/nerdtree'
+Plugin 'lervag/vimtex'
 
 filetype plugin indent on
 
