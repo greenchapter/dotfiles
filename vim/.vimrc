@@ -43,6 +43,7 @@ set nostartofline
 set noeol
 set scrolloff=3
 set cul
+set mouse=a
 autocmd InsertEnter,InsertLeave * set nocul!
 let g:netrw_banner=0
 let g:netrw_liststyle=3
