@@ -3,4 +3,4 @@
 .DS_Store
 # vim-related files
 .netrwhist
-# vim/.vim/bundle
+vim/.vim/bundle
