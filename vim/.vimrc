@@ -2,10 +2,9 @@ set nocompatible
 set encoding=utf-8 nobomb
 filetype off
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
 
-Plugin 'VundleVim/Vundle.vim'
 Plugin 'dracula/vim'
 Plugin 'othree/yajs.vim'
 Plugin 'othree/html5.vim'
@@ -13,8 +12,9 @@ Plugin 'hail2u/vim-css3-syntax'
 Plugin 'Raimondi/delimitMate'
 Plugin 'vim-airline/vim-airline'
 Plugin 'tpope/vim-commentary'
+Plugin 'scrooloose/nerdtree'
+Plugin 'lervag/vimtex'
 
-call vundle#end()
 filetype plugin indent on
 
 set ruler
@@ -44,6 +44,7 @@ set nostartofline
 set noeol
 set scrolloff=3
 set cul
+set mouse=a
 autocmd InsertEnter,InsertLeave * set nocul!
 let g:netrw_banner=0
 let g:netrw_liststyle=3
