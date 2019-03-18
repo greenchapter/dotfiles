@@ -53,5 +53,9 @@ Here some **special commands**
 
 ## Vim
 
+Vim uses the plug-in manager [vundle](https://github.com/VundleVim/Vundle.vim)
+
+to install all supercarged vim plugins run `:PluginInstall` via Vim. `:PluginInstall` is for keeping up-to-date with the installed Vim plugins.
+
 ##### WebAssembly Command Line Support
 My dotfiles support wasmer binaries via CLI → [https://wasmer.io/](https://wasmer.io/)
