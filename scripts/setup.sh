@@ -37,8 +37,16 @@ fi
 # Update homebrew recipes
 brew update
 
-# Install zsh Bash
-brew install zsh zsh-completions
+echo -n "Install the Supercharged Homebrew Packages? (y/n) "
+read yesno < /dev/tty
+
+if [ "x$yesno" = "xy" ];then
+	# Check for Homebrew, install if we don't have it
+	if test ! $(which brew); then
+		echo "Installing homebrew packages 🍻..."
+		brew install zsh zsh-completions htop
+fi
+
 
 # Basic oh-my-zsh Installation
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
