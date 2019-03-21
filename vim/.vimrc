@@ -15,6 +15,7 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'tpope/vim-commentary'
 Plugin 'scrooloose/nerdtree'
 Plugin 'lervag/vimtex'
+Plugin 'airblade/vim-gitgutter'
 
 call vundle#end()
 
