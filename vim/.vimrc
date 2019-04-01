@@ -3,6 +3,8 @@ set encoding=utf-8 nobomb
 filetype off
 
 set rtp+=~/.vim/bundle/Vundle.vim
+set rtp+=/usr/local/opt/fzf
+
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
