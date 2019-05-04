@@ -13,6 +13,7 @@
 		".git",
 		".gitkeep",
 		".sass-cache",
+		".cache",
 		"tmp",
 		"node_modules",
 		"bower_components"
