@@ -4,6 +4,6 @@
 { "keys": ["f12"], "command": "reindent"},
 {
 	"keys": ["alt+w"],
-	"command": "sass_beautify"
+	"command": "js_prettier"
 }
 ]
