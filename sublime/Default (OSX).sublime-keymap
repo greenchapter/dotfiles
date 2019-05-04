@@ -1,9 +1,17 @@
 [
-{ "keys": ["command+7"], "command": "toggle_comment", "args": { "block": false } },
-{ "keys": ["command+shift+7"], "command": "toggle_comment", "args": { "block": true } },
-{ "keys": ["f12"], "command": "reindent"},
-{
-	"keys": ["alt+w"],
-	"command": "js_prettier"
-}
+	{
+		"keys": ["command+7"],
+		"command": "toggle_comment",
+		"args": { "block": false }
+	},
+	{
+		"keys": ["command+shift+7"],
+		"command": "toggle_comment",
+		"args": { "block": true }
+	},
+	{ "keys": ["f12"], "command": "reindent" },
+	{
+		"keys": ["alt+w"],
+		"command": "js_prettier"
+	}
 ]
