@@ -47,6 +47,10 @@ The fully supported usage of tmux need to install the homebrew package **reattac
 
 The config file is inspired by [Monorkins](https://github.com/monorkin) [tmux configuration](https://github.com/monorkin/dotfiles/blob/417fd14199a7470c5e924c0f5567b3987632047c/tmux.conf)😘
 
+
+## fzf
+For full fzf install run `$(brew --prefix)/opt/fzf/install`  
+
 Here some **special commands**
 
 * Reload Configuration with *prefix C-b **r***
