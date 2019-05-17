@@ -10,8 +10,6 @@
 	<integer>1</integer>
 	<key>AppleWindowTabbingMode</key>
 	<string>manual</string>
-	<key>CGFontRenderingFontSmoothingDisabled</key>
-	<false/>
 	<key>Custom Color Presets</key>
 	<dict>
 		<key>Dracula</key>
@@ -232,8 +230,12 @@
 	<key>LoadPrefsFromCustomFolder</key>
 	<true/>
 	<key>NSNavLastRootDirectory</key>
-	<string>~/.dotfiles/iterm</string>
+	<string>~/Documents</string>
+	<key>NSNavLastUserSetHideExtensionButtonState</key>
+	<true/>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
+	<string>{712, 448}</string>
+	<key>NSNavPanelExpandedSizeForSaveMode</key>
 	<string>{712, 448}</string>
 	<key>NSQuotedKeystrokeBinding</key>
 	<string></string>
@@ -271,18 +273,49 @@
 		<key>TB Is Shown</key>
 		<integer>1</integer>
 	</dict>
+	<key>NSTouchBarConfig: regular</key>
+	<dict>
+		<key>CurrentItems</key>
+		<array>
+			<string>iTermTouchBarIdentifierStatus</string>
+			<string>NSTouchBarItemIdentifierFlexibleSpace</string>
+			<string>NSTouchBarItemIdentifierOtherItemsProxy</string>
+			<string>iTermTouchBarIdentifierAddMark</string>
+			<string>iTermTouchBarIdentifierPreviousMark</string>
+			<string>iTermTouchBarIdentifierNextMark</string>
+		</array>
+		<key>DefaultItems</key>
+		<array>
+			<string>iTermTouchBarIdentifierManPage</string>
+			<string>iTermTouchBarIdentifierColorPreset</string>
+			<string>iTermTouchBarIdentifierFunctionKeys</string>
+			<string>NSTouchBarItemIdentifierFlexibleSpace</string>
+			<string>NSTouchBarItemIdentifierOtherItemsProxy</string>
+			<string>iTermTouchBarIdentifierAddMark</string>
+			<string>iTermTouchBarIdentifierPreviousMark</string>
+			<string>iTermTouchBarIdentifierNextMark</string>
+		</array>
+	</dict>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>1015 233 445 386 0 0 1680 1027 </string>
+	<string>1230 297 701 254 0 0 2304 1273 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>970 768 620 392 0 0 2560 1417 </string>
+	<key>NSWindow Frame SessionsPreferences</key>
+	<string>269 74 599 521 0 0 2304 1273 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>1091 590 796 486 0 0 2560 1417 </string>
+	<string>639 327 918 514 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>164 424 780 603 0 0 1680 1027 </string>
+	<string>203 116 857 860 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>1105 634 780 783 0 0 2560 1417 </string>
+	<string>445 166 780 837 0 0 2304 1273 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
-	<string>360 435 780 837 0 0 2560 1417 </string>
+	<string>-867 -543 766 891 -1680 -628 1680 1027 </string>
+	<key>NSWindow Frame iTerm Window 3</key>
+	<string>668 424 780 603 0 0 1680 1027 </string>
+	<key>NSWindow Frame iTerm Window 4</key>
+	<string>406 112 780 603 0 0 1680 1027 </string>
+	<key>NSWindow Frame iTerm Window 5</key>
+	<string>427 447 780 580 0 0 1680 1027 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -968,20 +1001,29 @@
 			<string>/Users/thomas.ott</string>
 		</dict>
 	</array>
+	<key>NoSyncCommandHistoryHasEverBeenUsed</key>
+	<true/>
 	<key>NoSyncHaveRequestedFullDiskAccess</key>
+	<true/>
+	<key>NoSyncHaveWarnedAboutIncompatibleSoftware</key>
 	<true/>
 	<key>NoSyncHaveWarnedAboutPasteConfirmationChange</key>
 	<true/>
 	<key>NoSyncInstallationId</key>
-	<string>892D38FC-F3D3-48E9-B36C-4326ACEA199C</string>
-	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
-	<true/>
-	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
-	<integer>0</integer>
+	<string>E3406029-CF53-4A87-BD45-E8AF691CF9A0</string>
+	<key>NoSyncLastTipTime</key>
+	<real>569977754.76005805</real>
 	<key>NoSyncPermissionToShowTip</key>
 	<false/>
+	<key>NoSyncSaveDocumentAsPathSet_saveDocumentAs:</key>
+	<true/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
-	<real>568668846.39763105</real>
+	<real>568637649.82145202</real>
+	<key>NoSyncTipsToNotShow</key>
+	<array>
+		<string>000</string>
+		<string>000</string>
+	</array>
 	<key>PointerActions</key>
 	<dict>
 		<key>Button,1,1,,</key>
@@ -1016,17 +1058,17 @@
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-	<string>/Users/Thomas/.dotfiles/iterm</string>
+	<string>/Users/thomas.ott/.dotfiles/iterm</string>
 	<key>SUEnableAutomaticChecks</key>
 	<true/>
 	<key>SUFeedAlternateAppNameKey</key>
 	<string>iTerm</string>
 	<key>SUFeedURL</key>
-	<string>https://iterm2.com/appcasts/final.xml?shard=85</string>
+	<string>https://iterm2.com/appcasts/final.xml?shard=69</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2019-05-07T17:20:11Z</date>
+	<date>2019-05-11T04:46:36Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowBookmarkName</key>
@@ -1035,6 +1077,8 @@
 	<real>0.23117988782051285</real>
 	<key>WordCharacters</key>
 	<string>/-+\~_.</string>
+	<key>findMode_iTerm</key>
+	<integer>0</integer>
 	<key>iTerm Version</key>
 	<string>3.2.9</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
