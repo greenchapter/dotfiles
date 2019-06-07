@@ -135,3 +135,6 @@ if [ -f '/Users/thomas.ott/Downloads/google-cloud-sdk/completion.zsh.inc' ]; the
 export PATH="/usr/local/sbin:$PATH"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+#Rust Packagemanager Cargo
+source $HOME/.cargo/env
