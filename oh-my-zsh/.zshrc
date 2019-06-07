@@ -50,7 +50,7 @@ COMPLETION_WAITING_DOTS="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(ranger tmux git sublime code git-extras heroku nvm zsh-nvm extract last-working-dir zsh-better-npm-completion docker fzf)
+plugins=(history-substring-search tmux git sublime vscode git-extras nvm extract last-working-dir npm docker encode64 zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -133,3 +133,8 @@ if [ -f '/Users/thomas.ott/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/thomas.ott/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/thomas.ott/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
 export PATH="/usr/local/sbin:$PATH"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+#Rust Packagemanager Cargo
+source $HOME/.cargo/env

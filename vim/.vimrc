@@ -2,9 +2,10 @@ set nocompatible
 set encoding=utf-8 nobomb
 filetype off
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+set rtp+=/usr/local/opt/fzf
 
+call vundle#begin()
 Plugin 'dracula/vim'
 Plugin 'othree/yajs.vim'
 Plugin 'othree/html5.vim'
@@ -14,6 +15,9 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'tpope/vim-commentary'
 Plugin 'scrooloose/nerdtree'
 Plugin 'lervag/vimtex'
+Plugin 'airblade/vim-gitgutter'
+
+call vundle#end()
 
 filetype plugin indent on
 
