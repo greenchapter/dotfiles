@@ -13,6 +13,7 @@
 		".git",
 		".gitkeep",
 		".sass-cache",
+		".cache",
 		"tmp",
 		"node_modules",
 		"bower_components"
@@ -40,6 +41,7 @@
 	"soda_folder_icons": false,
 	"spacegray_fileicons": false,
 	"spacegray_tabs_large": true,
+	"city_lights_tabs_big": true,
 	"theme": "City-Lights.sublime-theme",
 	"tree_animation_enabled": false,
 	"trim_trailing_white_space_on_save": true,
