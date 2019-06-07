@@ -4,8 +4,6 @@ filetype off
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-
-Plugin 'VundleVim/Vundle.vim'
 Plugin 'dracula/vim'
 Plugin 'othree/yajs.vim'
 Plugin 'othree/html5.vim'
