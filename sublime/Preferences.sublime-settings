@@ -1,6 +1,7 @@
 {
 	"auto_complete_selector": true,
 	"bold_folder_labels": true,
+	"city_lights_tabs_big": true,
 	"close_windows_when_empty": true,
 	"color_scheme": "Packages/Dracula Color Scheme/Dracula.tmTheme",
 	"create_window_at_startup": true,
@@ -41,7 +42,6 @@
 	"soda_folder_icons": false,
 	"spacegray_fileicons": false,
 	"spacegray_tabs_large": true,
-	"city_lights_tabs_big": true,
 	"theme": "City-Lights.sublime-theme",
 	"tree_animation_enabled": false,
 	"trim_trailing_white_space_on_save": true,
