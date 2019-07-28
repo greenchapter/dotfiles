@@ -6,5 +6,11 @@
     "editor.lineHeight": 21.3,
     "editor.fontLigatures": true,
     "editor.letterSpacing": -0.7,
-    "workbench.startupEditor": "newUntitledFile"
+    "workbench.startupEditor": "newUntitledFile",
+    "workbench.activityBar.visible": true,
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "terminal.integrated.shell.osx": "/bin/zsh",
+    "terminal.integrated.lineHeight": 1.2
 }
