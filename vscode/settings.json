@@ -11,5 +11,6 @@
     "[typescript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "terminal.integrated.shell.osx": "/bin/zsh"
+    "terminal.integrated.shell.osx": "/bin/zsh",
+    "terminal.integrated.lineHeight": 1.2
 }
