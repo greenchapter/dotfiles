@@ -6,6 +6,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 set rtp+=/usr/local/opt/fzf
 
 call vundle#begin()
+
 Plugin 'dracula/vim'
 Plugin 'othree/yajs.vim'
 Plugin 'othree/html5.vim'
@@ -16,6 +17,8 @@ Plugin 'tpope/vim-commentary'
 Plugin 'scrooloose/nerdtree'
 Plugin 'lervag/vimtex'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'vim-syntastic/syntastic'
+Plugin 'ctrlpvim/ctrlp.vim'
 
 call vundle#end()
 
