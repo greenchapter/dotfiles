@@ -11,7 +11,7 @@
 	},
 	{ "keys": ["f12"], "command": "reindent" },
 	{
-		"keys": ["alt+w"],
+		"keys": ["shift+alt+f"],
 		"command": "js_prettier"
 	}
 ]
