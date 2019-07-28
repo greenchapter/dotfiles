@@ -20,6 +20,7 @@
 		"bower_components"
 	],
 	"font_face": "Source Code Pro for Powerline Regular",
+	"font_size": 12,
 	"ha_style": "filled",
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
