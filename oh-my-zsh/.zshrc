@@ -50,7 +50,7 @@ COMPLETION_WAITING_DOTS="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(history-substring-search tmux git sublime vscode git-extras nvm extract last-working-dir npm docker encode64 zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(history-substring-search tmux git sublime vscode git-extras nvm extract last-working-dir npm docker encode64 zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -127,14 +127,13 @@ load-nvmrc
 export WASMER_DIR="$HOME/.wasmer"
 [ -s "$WASMER_DIR/wasmer.sh" ] && source "$WASMER_DIR/wasmer.sh"
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/thomas.ott/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/thomas.ott/Downloads/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/thomas.ott/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/thomas.ott/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
-export PATH="/usr/local/sbin:$PATH"
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 #Rust Packagemanager Cargo
 source $HOME/.cargo/env
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/Thomas/.google-cloud-sdk/path.zsh.inc' ]; then . '/Users/Thomas/.google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/Thomas/.google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/Thomas/.google-cloud-sdk/completion.zsh.inc'; fi

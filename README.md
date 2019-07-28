@@ -64,6 +64,12 @@ Here some **special commands**
 
 -   Reload Configuration with \*prefix C-b **r\***
 
+## VSCode
+
+Generate extension list `code --list-extensions > extensions`
+ln -s `ln -s ~/.dotfiles/vscode/settings.json ~/Library/Application\ Support/Code/User`
+
+
 ## Vim
 
 Vim uses the plug-in manager [vundle](https://github.com/VundleVim/Vundle.vim)

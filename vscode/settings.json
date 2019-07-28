@@ -1,0 +1,10 @@
+{
+    "workbench.colorTheme": "Dracula",
+    "editor.fontFamily": "Source Code Pro for Powerline",
+    "editor.fontSize": 13,
+    "editor.fontWeight": "600",
+    "editor.lineHeight": 21.3,
+    "editor.fontLigatures": true,
+    "editor.letterSpacing": -0.7,
+    "workbench.startupEditor": "newUntitledFile"
+}
