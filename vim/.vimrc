@@ -18,6 +18,8 @@ Plugin 'tpope/vim-commentary'
 Plugin 'scrooloose/nerdtree'
 Plugin 'lervag/vimtex'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'vim-syntastic/syntastic'
+Plugin 'ctrlpvim/ctrlp.vim'
 
 call vundle#end()
 
