@@ -1,5 +1,6 @@
 ## Shell Aliases
 alias zshconfig="st ~/.zshrc"
+alias zshcustom="st ~/.customrc"
 alias tconfig="st ~/.tmux.conf"
 alias password="openssl rand -base64 32"
 alias cat='bat'

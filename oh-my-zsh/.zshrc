@@ -1,6 +1,6 @@
 # Set locales
-LC_CTYPE=en_US.UTF-8
-LC_ALL=en_US.UTF-8
+export LC_CTYPE=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
 
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
@@ -55,7 +55,7 @@ plugins=(history-substring-search tmux git sublime vscode git-extras nvm extract
 source $ZSH/oh-my-zsh.sh
 
 # Load all Supercharged aliases
-for f in $SUPERCHARGED/oh-my-zsh/aliases/*; do source $f; done
+for f in $SUPERCHARGED/oh-my-zsh/custom/*; do source $f; done
 
 ### User configuration
 export PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -126,14 +126,9 @@ load-nvmrc
 # Wasmer
 export WASMER_DIR="$HOME/.wasmer"
 [ -s "$WASMER_DIR/wasmer.sh" ] && source "$WASMER_DIR/wasmer.sh"
+export PATH="/usr/local/sbin:$PATH"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 #Rust Packagemanager Cargo
 source $HOME/.cargo/env
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/Thomas/.google-cloud-sdk/path.zsh.inc' ]; then . '/Users/Thomas/.google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/Thomas/.google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/Thomas/.google-cloud-sdk/completion.zsh.inc'; fi
