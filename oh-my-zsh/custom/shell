@@ -1,8 +1,8 @@
 ## Shell Aliases
 alias zshconfig="st ~/.zshrc"
-alias zshcustom="st ~/.customrc"
+alias zshcustom="st $SUPERCHARGED/oh-my-zsh/custom"
 alias tconfig="st ~/.tmux.conf"
-alias password="openssl rand -base64 32"
+alias password="openssl rand -base64 48"
 alias cat='bat'
 alias ping='prettyping --nolegend'
 alias preview="fzf --preview 'bat --color \"always\" {}'"
