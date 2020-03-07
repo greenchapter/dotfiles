@@ -66,8 +66,17 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 export NVM_LAZY_LOAD=false
 # Add Visual Studio Code to the prompt
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+
 # restyle the zsh prompt
-export PS1='%{$fg_bold[green]%}%n@localhost%{$reset_color%} %{$fg_bold[blue]%}%2~%{$reset_color%} $(my_git_prompt_info)%{$reset_color%}%B»%b '
+function nvm_prompt_version {
+    if which nvm &> /dev/null; then
+        if [[ $(nvm version) != "system" ]]; then
+          echo "($(nvm version | cut -c2-)) "
+        fi
+    fi
+}
+export PS1='%{$fg_bold[green]%}%n@localhost%{$reset_color%} $(nvm_prompt_version)%{$fg_bold[blue]%}%2~%{$reset_color%} $(my_git_prompt_info)%{$reset_color%}%B»%b '
+
 alias upgrade_supercharged='source ~/.dotfiles/scripts/upgrade.sh'
 
 ## TAR Tooling
@@ -132,3 +141,4 @@ export PATH="/usr/local/sbin:$PATH"
 
 #Rust Packagemanager Cargo
 source $HOME/.cargo/env
+
