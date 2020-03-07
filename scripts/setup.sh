@@ -14,6 +14,9 @@ echo -n "    |  ______--|\n"
 echo -n "     -/.::::.\-\n"
 echo -n "      -------- \n\n"
 
+# Basic oh-my-zsh Installation
+# sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
 # get sudo rights for all the things
 echo -ne '\033[1mGet sudo rights for all the things. Is this ok?\033[0m (yes/no) '
 read yesno < /dev/tty
@@ -33,7 +36,7 @@ read yesno < /dev/tty
 if [ "x$yesno" = "xy" ] || [ "x$yesno" = "xyes" ];then
 	# Check for Homebrew, install if we don't have it
 	if test ! $(which brew); then
-		echo "Installing homebrew..."
+		echo "\n  ⏺  Installing homebrew...\n"
 		ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 	else
 		echo "\n  ✅ You already have installed homebrew.\n"
@@ -54,7 +57,38 @@ else
 	exit
 fi
 
+# Install oh-my-zsh
 
+echo -ne "\033[1mWould you like to install oh-my-zsh?\033[0m (yes/no) "
+read yesno < /dev/tty
 
-# Basic oh-my-zsh Installation
-# sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+if [ "x$yesno" = "xy" ] || [ "x$yesno" = "xyes" ];then
+
+	echo "\n  ⏺  Checking prerequisites...\n"
+
+	if test $(which git); then
+		echo ✓ $(git --version) "\n"
+	else
+		exit
+	fi
+
+	if test $(which curl); then
+		echo ✓ $(curl --version) "\n"
+	else
+		exit
+	fi
+
+	if test $(which zsh); then
+		echo ✓ $(zsh --version) "\n"
+	else
+		exit
+	fi
+
+	echo "  ⏺  Installing oh-my-zsh...\n"
+	sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+	echo "\n  ✅ Oh-my-zsh is installed.\n"
+
+else
+	echo "Sorry, these script only runs with root rights. 🙈"
+	exit
+fi
