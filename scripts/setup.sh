@@ -6,18 +6,26 @@
 # Based on Gerald baeck Bootstrap Script
 # - https://github.com/geraldbaeck/dotfiles/blob/master/osx_scripts/osx_bootstrap.sh
 
-echo "\n\nStart bootstrapping your new mac.\n"
+echo "\n\n     Start bootstrapping your new mac.\n"
 echo -n "       .----.\n"
-echo -n "       |>_  |\n"
+echo -n "       |\033[1m>_\033[0m  |\n"
 echo -n "     __|____|__\n"
 echo -n "    |  ______--|\n"
 echo -n "     -/.::::.\-\n"
 echo -n "      -------- \n\n"
 
+echo -n "     This setup is as simple as described here:\n"
+echo -n "     \033[1mhttps://www.youtube.com/watch?v=SGzkUgTgpa4\033[0m\n\n\n"
+
 # Basic oh-my-zsh Installation
 # sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 # get sudo rights for all the things
+
+main() {
+}
+
+
 echo -ne '\033[1mGet sudo rights for all the things. Is this ok?\033[0m (yes/no) '
 read yesno < /dev/tty
 
@@ -50,7 +58,12 @@ read yesno < /dev/tty
 
 if [ "x$yesno" = "xy" ] || [ "x$yesno" = "xyes" ];then
 	echo "\n  ⏺  Installing homebrew packages 🍻...\n"
- 	brew update && brew install zsh zsh-completions htop bmon
+ 	brew update && \
+ 	brew install \
+ 	zsh \
+ 	zsh-completions \
+ 	htop \
+ 	bmon
  	echo "\n  ✅ All brew kegs are updated or installed.\n"
 else
 	echo "Sorry, Supercharged only works with installed brew kegs 🙈"
@@ -110,3 +123,5 @@ else
 	echo "Sorry, these script only runs with root rights. 🙈"
 	exit
 fi
+
+main "$@"
