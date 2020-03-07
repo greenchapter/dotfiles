@@ -57,6 +57,24 @@ else
 	exit
 fi
 
+# Install NPM Packages
+echo -ne '\033[1mWould you like to install the Supercharged NPM packages?\033[0m (yes/no) '
+read yesno < /dev/tty
+
+if [ "x$yesno" = "xy" ] || [ "x$yesno" = "xyes" ];then
+
+	echo "\n  ⏺  Installing the latest version of npm...\n"
+	npm install npm@latest -g
+	echo "\n  ⏺  Installing the latest versions of the supercharged npm packages...\n"
+	npm install -g \
+	@angular/cli@latest \
+	@vue/cli@latest \
+	@vue/cli-init@latest \
+	pnpm@latest
+	echo "\n  ✅ You installed the latest version of the global needed node modules.\n"
+
+fi
+
 # Install oh-my-zsh
 
 echo -ne "\033[1mWould you like to install oh-my-zsh?\033[0m (yes/no) "
