@@ -75,7 +75,7 @@ function nvm_prompt_version {
         fi
     fi
 }
-export PS1='%{$fg_bold[green]%}%n@localhost%{$reset_color%} $(nvm_prompt_version)%{$fg_bold[blue]%}%2~%{$reset_color%} $(my_git_prompt_info)%{$reset_color%}%B»%b '
+export PS1='%{$fg_bold[green]%}*%{$reset_color%} $(nvm_prompt_version)%{$fg_bold[blue]%}%2~%{$reset_color%} $(my_git_prompt_info)%{$reset_color%}%B»%b '
 
 alias upgrade_supercharged='source ~/.dotfiles/scripts/upgrade.sh'
 
