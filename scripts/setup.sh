@@ -89,13 +89,14 @@ setup_homebrew() {
 
 	if [ "x$yesno" = "xy" ] || [ "x$yesno" = "xyes" ];then
 		echo "\n  ⏺  Updating homebrew packages...\n"
-	 	brew update
+
+	 	brew bundle check
+
 	 	echo "\n  ⏺  Installing homebrew packages...\n"
-	 	brew install \
-	 	zsh \
-	 	zsh-completions \
-	 	htop \
-	 	bmon
+
+	 	# https://github.com/Homebrew/homebrew-bundle
+	 	brew bundle --verbose --no-lock
+
 	 	echo "\n  ✴️  All brew kegs are updated or installed.\n"
 	else
 		echo "Sorry, Supercharged only works with installed brew kegs 🙈"
