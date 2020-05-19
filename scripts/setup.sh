@@ -113,12 +113,44 @@ install_npm() {
 
 		echo "\n  ⏺  Installing the latest version of npm...\n"
 		npm install npm@latest -g
+		echo "\n  ✴️  Latest npm version installed.\n\n"
 		echo "\n  ⏺  Installing the latest versions of the supercharged npm packages...\n"
 		npm install -g \
 		@angular/cli@latest \
 		@vue/cli@latest \
 		@vue/cli-init@latest \
-		pnpm@latest
+		contentful-cli@latest \
+		ember-cli@latest \
+		emma-cli@latest \
+		emoj@latest \
+		fast-cli@latest \
+		favicon-emoji@latest \
+		gatsby-cli@latest \
+		gitmoji-cli@latest \
+		graphql@latest \
+		gulp@latest \
+		gulp-cli@latest \
+		netlify-cli@latest \
+		nodemon@latest \
+		npkill@latest \
+		npm-check@latest \
+		ntl@latest \
+		parcel-bundler@latest \
+		pm2@latest \
+		pnpm@latest \
+		prettier@latest \
+		rollup@latest \
+		sass@latest \
+		semantic-release-cli@latest \
+		standard-changelog@latest \
+		strapi@latest \
+		surge@latest \
+		svelte@latest \
+		vuepress@latest \
+		webpack@latest \
+		webpack-cli@latest \
+		yarn@latest
+
 		echo "\n  ✴️  You installed the latest version of the global needed node modules.\n"
 
 	fi
