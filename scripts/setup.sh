@@ -84,7 +84,7 @@ install_homebrew() {
 
 setup_homebrew() {
 	# Install or Update brew kegs
-	echo -ne '\033[1mDo you want to isnstall the Supercharged homebrew packages?\033[0m (yes/no) '
+	echo -ne '\033[1mDo you want to install the Supercharged homebrew packages?\033[0m (yes/no) '
 	read yesno < /dev/tty
 
 	if [ "x$yesno" = "xy" ] || [ "x$yesno" = "xyes" ];then
