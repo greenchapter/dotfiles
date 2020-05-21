@@ -62,7 +62,7 @@ update_dotfiles() {
   git pull github master
   cd - > /dev/null 2>&1
 
-  finish "All zplug packages are up to date."
+  finish "Yeww! You have updated the dotfiles."
 
   info "Updating zplug packages..."
 
@@ -130,7 +130,7 @@ on_finish() {
 
 on_error() {
   error "Wow... Something serious happened!"
-  error "Though, I don't know what really happened :("
+  error "There was an error updating. Try again later?"
   exit 1
 }
 
