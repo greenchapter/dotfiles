@@ -77,8 +77,6 @@ function nvm_prompt_version {
 }
 export PS1='%{$fg_bold[green]%}*%{$reset_color%} $(nvm_prompt_version)%{$fg_bold[blue]%}%2~%{$reset_color%} $(my_git_prompt_info)%{$reset_color%}%B»%b '
 
-alias upgrade_supercharged='source ~/.dotfiles/scripts/upgrade.sh'
-
 ## TAR Tooling
 alias pack='f() { tar -cvf $1.tar $1};f'
 alias compress='f() { tar -cvzf $1.tgz $1};f'
@@ -132,6 +130,10 @@ load-nvmrc() {
 add-zsh-hook chpwd load-nvmrc
 load-nvmrc
 
+# zplug
+export ZPLUG_HOME=/usr/local/opt/zplug
+source $ZPLUG_HOME/init.zsh
+
 # Wasmer
 export WASMER_DIR="$HOME/.wasmer"
 [ -s "$WASMER_DIR/wasmer.sh" ] && source "$WASMER_DIR/wasmer.sh"
@@ -141,4 +143,32 @@ export PATH="/usr/local/sbin:$PATH"
 
 #Rust Packagemanager Cargo
 source $HOME/.cargo/env
+
+# ZSH plugin manager zplug
+export ZPLUG_HOME=/usr/local/opt/zplug
+source $ZPLUG_HOME/init.zsh
+
+# Let zplug manage itself like other packages
+zplug 'zplug/zplug', hook-build:'zplug --self-manage'
+
+# oh-My-Zsh core
+# zplug "lib/*", from:oh-my-zsh
+
+#Extra
+zplug "lukechilds/zsh-better-npm-completion", defer:2
+zplug "webyneter/docker-aliases", use:docker-aliases.plugin.zsh
+
+# Dotfiles
+zplug "$SUPERCHARGED/local", from:local
+zplug "$SUPERCHARGED/custom", from:local
+
+# Install plugins if there are plugins that have not been installed
+if ! zplug check --verbose; then
+  zplug install
+fi
+
+# Then, source plugins and add commands to $PATH
+zplug load
+
+
 
