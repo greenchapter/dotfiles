@@ -50,7 +50,7 @@ COMPLETION_WAITING_DOTS="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(history-substring-search tmux git sublime vscode git-extras nvm extract last-working-dir npm docker encode64 zsh-autosuggestions)
+# plugins=(history-substring-search tmux git sublime vscode git-extras nvm extract last-working-dir npm docker encode64 zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -145,4 +145,24 @@ export PATH="/usr/local/sbin:$PATH"
 
 #Rust Packagemanager Cargo
 source $HOME/.cargo/env
+
+# ZSH plugin manager zplug
+export ZPLUG_HOME=/usr/local/opt/zplug
+source $ZPLUG_HOME/init.zsh
+
+# Let zplug manage itself like other packages
+zplug 'zplug/zplug', hook-build:'zplug --self-manage'
+
+# Dotfiles
+zplug "$SUPERCHARGED/local", from:local
+
+# Install plugins if there are plugins that have not been installed
+if ! zplug check --verbose; then
+  zplug install
+fi
+
+# Then, source plugins and add commands to $PATH
+zplug load
+
+
 
