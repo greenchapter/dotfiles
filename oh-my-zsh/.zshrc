@@ -50,7 +50,7 @@ COMPLETION_WAITING_DOTS="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-# plugins=(history-substring-search tmux git sublime vscode git-extras nvm extract last-working-dir npm docker encode64 zsh-autosuggestions)
+plugins=(history-substring-search tmux git sublime vscode git-extras nvm extract last-working-dir npm docker encode64 zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -76,8 +76,6 @@ function nvm_prompt_version {
     fi
 }
 export PS1='%{$fg_bold[green]%}*%{$reset_color%} $(nvm_prompt_version)%{$fg_bold[blue]%}%2~%{$reset_color%} $(my_git_prompt_info)%{$reset_color%}%B»%b '
-
-alias upgrade_supercharged='source ~/.dotfiles/scripts/upgrade.sh'
 
 ## TAR Tooling
 alias pack='f() { tar -cvf $1.tar $1};f'
@@ -153,8 +151,16 @@ source $ZPLUG_HOME/init.zsh
 # Let zplug manage itself like other packages
 zplug 'zplug/zplug', hook-build:'zplug --self-manage'
 
+# oh-My-Zsh core
+# zplug "lib/*", from:oh-my-zsh
+
+#Extra
+zplug "lukechilds/zsh-better-npm-completion", defer:2
+zplug "webyneter/docker-aliases", use:docker-aliases.plugin.zsh
+
 # Dotfiles
 zplug "$SUPERCHARGED/local", from:local
+zplug "$SUPERCHARGED/custom", from:local
 
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
