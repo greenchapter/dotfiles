@@ -54,9 +54,6 @@ plugins=(history-substring-search tmux git sublime vscode git-extras nvm extract
 
 source $ZSH/oh-my-zsh.sh
 
-# Load all Supercharged aliases
-for f in $SUPERCHARGED/oh-my-zsh/custom/*; do source $f; done
-
 ### User configuration
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export MANPATH="/usr/local/man:$MANPATH"
