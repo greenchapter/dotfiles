@@ -1,5 +1,8 @@
+# General
 alias update='source $SUPERCHARGED/scripts/update.sh'
 alias dots='cd $SUPERCHARGED'
+alias zshconfig="$EDITOR $HOME/.zshrc"
+alias reload="source $HOME/.zshrc"
 
 ## TAR Tooling
 alias pack='f() { tar -cvf $1.tar $1};f'
@@ -11,16 +14,13 @@ alias npm-global="npm list -g --depth=0"
 alias npm-reset="rm -rf node_modules/ && npm cache clean --force && npm i"
 
 # Docker Tooling
-# remove all docker related container and images
 alias docker-wipeout='docker container rm --force $(docker container ls -a -q) && docker image rm --force $(docker image ls -a -q) && docker image prun --force'
 
 # Chrome
 alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
 
-
 ## Shell Aliases
-alias zshconfig="$EDITOR ~/.zshrc"
-alias tconfig="st ~/.tmux.conf"
+alias tconfig="$EDITOR ~/.tmux.conf"
 alias password="openssl rand -base64 48"
 alias cat='bat'
 alias ping='prettyping --nolegend'
@@ -33,4 +33,3 @@ alias ll="ls -F"
 alias le="exa -lga --git"
 alias lle="exa -Ta"
 alias py="python3"
-alias reload="source ~/.zshrc"

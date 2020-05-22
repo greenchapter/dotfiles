@@ -83,7 +83,7 @@ fpath=(/usr/local/share/zsh-completions $fpath)
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
 else
-  export EDITOR='/Applications/Sublimpe Text.app/Contents/SharedSupport/bin/subl'
+  export EDITOR='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
 fi
 
 # This loads nvm bash_completion

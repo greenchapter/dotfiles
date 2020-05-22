@@ -116,16 +116,6 @@ update_npm() {
 
 on_finish() {
   bye "Happy Coding!"
-  # echo
-  # echo -ne $RED'-_-_-_-_-_-_-_-_-_-_-_-_-_-_'
-  # echo -e  $RESET$BOLD',------,'$RESET
-  # echo -ne $YELLOW'-_-_-_-_-_-_-_-_-_-_-_-_-_-_'
-  # echo -e  $RESET$BOLD'|   /\_/\\'$RESET
-  # echo -ne $GREEN'-_-_-_-_-_-_-_-_-_-_-_-_-_-'
-  # echo -e  $RESET$BOLD'~|__( ^ .^)'$RESET
-  # echo -ne $CYAN'-_-_-_-_-_-_-_-_-_-_-_-_-_-_'
-  # echo -e  $RESET$BOLD'""  ""'$RESET
-  # echo
 }
 
 on_error() {
