@@ -140,7 +140,6 @@ zplug "lukechilds/zsh-better-npm-completion", defer:2
 zplug "webyneter/docker-aliases", use:docker-aliases.plugin.zsh
 
 # Dotfiles
-zplug "$SUPERCHARGED/local", from:local
 zplug "$SUPERCHARGED/custom", from:local
 
 # Install plugins if there are plugins that have not been installed
