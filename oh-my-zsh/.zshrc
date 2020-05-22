@@ -77,29 +77,13 @@ function nvm_prompt_version {
 }
 export PS1='%{$fg_bold[green]%}*%{$reset_color%} $(nvm_prompt_version)%{$fg_bold[blue]%}%2~%{$reset_color%} $(my_git_prompt_info)%{$reset_color%}%B»%b '
 
-## TAR Tooling
-alias pack='f() { tar -cvf $1.tar $1};f'
-alias compress='f() { tar -cvzf $1.tgz $1};f'
-alias compress7z='f() { 7z a $1.7z $1 };f'
-
-# NPM Tooling
-alias npm-global="npm list -g --depth=0"
-alias npm-reset="rm -rf node_modules/ && npm cache clean --force && npm i"
-
-# Docker Tooling
-# remove all docker related container and images
-alias docker-wipeout='docker container rm $(docker container ls -a -q) && docker image rm $(docker image ls -a -q) && docker image prune'
-
-# Chrome
-alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
-
 fpath=(/usr/local/share/zsh-completions $fpath)
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
 else
-  export EDITOR='vim'
+  export EDITOR='/Applications/Sublimpe Text.app/Contents/SharedSupport/bin/subl'
 fi
 
 # This loads nvm bash_completion
