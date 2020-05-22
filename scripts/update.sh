@@ -18,7 +18,7 @@ _exists() {
 
 # Success reporter
 info() {
-  echo -e "\n  ⏺  ${*}${RESET}\n"
+  echo -e "\n ⏺  ${*}${RESET}\n"
 }
 
 show() {
@@ -27,16 +27,16 @@ show() {
 
 # Error reporter
 error() {
-  echo -e "${RED}${*}${RESET}"
+  echo -e "${RED}${*}${RESET}\n"
 }
 
 # Success reporter
 success() {
-  echo -e "\n  ✴️  ${ORANGE}${*}${RESET}\n"
+  echo -e "\n ✳️  ${GREEN}${*}${RESET}\n"
 }
 
 bye() {
-  echo -e "\n  💟  ${PURPLE}${*}${RESET}\n"
+  echo -e "\n 💟 ${PURPLE}${*}${RESET}\n"
 }
 
 # End section
@@ -62,7 +62,7 @@ update_dotfiles() {
   git pull github master
   cd - > /dev/null 2>&1
 
-  finish "All zplug packages are up to date."
+  finish "Yeww! You have updated the dotfiles."
 
   info "Updating zplug packages..."
 
@@ -116,21 +116,11 @@ update_npm() {
 
 on_finish() {
   bye "Happy Coding!"
-  # echo
-  # echo -ne $RED'-_-_-_-_-_-_-_-_-_-_-_-_-_-_'
-  # echo -e  $RESET$BOLD',------,'$RESET
-  # echo -ne $YELLOW'-_-_-_-_-_-_-_-_-_-_-_-_-_-_'
-  # echo -e  $RESET$BOLD'|   /\_/\\'$RESET
-  # echo -ne $GREEN'-_-_-_-_-_-_-_-_-_-_-_-_-_-'
-  # echo -e  $RESET$BOLD'~|__( ^ .^)'$RESET
-  # echo -ne $CYAN'-_-_-_-_-_-_-_-_-_-_-_-_-_-_'
-  # echo -e  $RESET$BOLD'""  ""'$RESET
-  # echo
 }
 
 on_error() {
   error "Wow... Something serious happened!"
-  error "Though, I don't know what really happened :("
+  error "There was an error updating. Try again later?"
   exit 1
 }
 
