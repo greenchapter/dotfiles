@@ -21,7 +21,11 @@ alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
 
 ## Shell Aliases
 alias tconfig="$EDITOR ~/.tmux.conf"
-alias password="openssl rand -base64 48"
+
+if _exists pbcopy; then
+  alias password='openssl rand -base64 ${1:-22} | pbcopy ; echo "$(pbpaste)"'
+fi
+
 alias cat='bat'
 alias ping='prettyping --nolegend'
 alias preview="fzf --preview 'bat --color \"always\" {}'"
