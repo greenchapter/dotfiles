@@ -2,7 +2,7 @@
 alias update='source $SUPERCHARGED/scripts/update.sh'
 alias dots='cd $SUPERCHARGED'
 alias zshconfig="$EDITOR $HOME/.zshrc"
-alias reload="source $HOME/.zshrc"
+alias reload="zplug update && source $HOME/.zshrc"
 
 ## TAR Tooling
 alias pack='f() { tar -cvf $1.tar $1};f'
@@ -12,6 +12,7 @@ alias compress7z='f() { 7z a $1.7z $1 };f'
 # NPM Tooling
 alias npm-global="npm list -g --depth=0"
 alias npm-reset="rm -rf node_modules/ && npm cache clean --force && npm i"
+alias npm-validation="rm -rf node_modules && npm install && npm run build"
 
 # Docker Tooling
 alias docker-wipeout='docker container rm --force $(docker container ls -a -q) && docker image rm --force $(docker image ls -a -q) && docker image prun --force'
