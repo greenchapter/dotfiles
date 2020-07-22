@@ -73,6 +73,14 @@ update_dotfiles() {
   finish "All zplug packages are up to date."
 }
 
+update_oh_my_zsh() {
+  info "Updating oh-my-zsh..."
+
+  upgrade_oh_my_zsh
+
+  finish "Yeww! You have updated the oh-my-zsh."
+}
+
 update_brew() {
   if ! _exists brew; then
     return
@@ -127,6 +135,7 @@ on_error() {
 main() {
   on_start "$*"
   update_dotfiles "$*"
+  update_oh_my_zsh "$*"
   update_brew "$*"
   update_npm "$*"
   on_finish "$*"
