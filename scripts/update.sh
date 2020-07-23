@@ -69,6 +69,7 @@ update_dotfiles() {
   zplug clean --force
   zplug clear
   zplug update
+  source $HOME/.zshrc
 
   finish "All zplug packages are up to date."
 }
