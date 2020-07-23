@@ -69,16 +69,17 @@ update_dotfiles() {
   zplug clean --force
   zplug clear
   zplug update
+  source $HOME/.zshrc
 
   finish "All zplug packages are up to date."
 }
 
 update_oh_my_zsh() {
-  info "Updating oh-my-zsh..."
+  info "Check oh-my-zsh for updates."
 
   upgrade_oh_my_zsh
 
-  finish "Yeww! You have updated the oh-my-zsh."
+  finish "Awesomo, you have the latest version."
 }
 
 update_brew() {
