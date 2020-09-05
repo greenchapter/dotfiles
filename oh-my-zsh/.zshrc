@@ -54,44 +54,15 @@ plugins=(history-substring-search tmux git sublime vscode git-extras nvm extract
 
 source $ZSH/oh-my-zsh.sh
 
-# Load all Supercharged aliases
-for f in $SUPERCHARGED/oh-my-zsh/custom/*; do source $f; done
-
 ### User configuration
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export MANPATH="/usr/local/man:$MANPATH"
 # SSH private key path
 export SSH_KEY_PATH="~/.ssh/rsa_id"
-# deactivate NVM lazy loading
-export NVM_LAZY_LOAD=false
 # Add Visual Studio Code to the prompt
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 
-# restyle the zsh prompt
-function nvm_prompt_version {
-    if which nvm &> /dev/null; then
-        if [[ $(nvm version) != "system" ]]; then
-          echo "($(nvm version | cut -c2-)) "
-        fi
-    fi
-}
 export PS1='%{$fg_bold[green]%}*%{$reset_color%} $(nvm_prompt_version)%{$fg_bold[blue]%}%2~%{$reset_color%} $(my_git_prompt_info)%{$reset_color%}%B»%b '
-
-## TAR Tooling
-alias pack='f() { tar -cvf $1.tar $1};f'
-alias compress='f() { tar -cvzf $1.tgz $1};f'
-alias compress7z='f() { 7z a $1.7z $1 };f'
-
-# NPM Tooling
-alias npm-global="npm list -g --depth=0"
-alias npm-reset="rm -rf node_modules/ && npm cache clean --force && npm i"
-
-# Docker Tooling
-# remove all docker related container and images
-alias docker-wipeout='docker container rm $(docker container ls -a -q) && docker image rm $(docker image ls -a -q) && docker image prune'
-
-# Chrome
-alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
 
 fpath=(/usr/local/share/zsh-completions $fpath)
 
@@ -99,36 +70,8 @@ fpath=(/usr/local/share/zsh-completions $fpath)
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
 else
-  export EDITOR='vim'
+  export EDITOR='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
 fi
-
-# This loads nvm bash_completion
-  export NVM_DIR="$HOME/.nvm"
-  [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"
-  [ -s "/usr/local/opt/nvm/etc/bash_completion" ] && . "/usr/local/opt/nvm/etc/bash_completion"
-
-
-  # place this after nvm initialization!
-autoload -U add-zsh-hook
-load-nvmrc() {
-  local node_version="$(nvm version)"
-  local nvmrc_path="$(nvm_find_nvmrc)"
-
-  if [ -n "$nvmrc_path" ]; then
-    local nvmrc_node_version=$(nvm version "$(cat "${nvmrc_path}")")
-
-    if [ "$nvmrc_node_version" = "N/A" ]; then
-      nvm install
-    elif [ "$nvmrc_node_version" != "$node_version" ]; then
-      nvm use
-    fi
-  elif [ "$node_version" != "$(nvm version default)" ]; then
-    echo "Reverting to nvm default version"
-    nvm use default
-  fi
-}
-add-zsh-hook chpwd load-nvmrc
-load-nvmrc
 
 # zplug
 export ZPLUG_HOME=/usr/local/opt/zplug
@@ -159,7 +102,6 @@ zplug "lukechilds/zsh-better-npm-completion", defer:2
 zplug "webyneter/docker-aliases", use:docker-aliases.plugin.zsh
 
 # Dotfiles
-zplug "$SUPERCHARGED/local", from:local
 zplug "$SUPERCHARGED/custom", from:local
 
 # Install plugins if there are plugins that have not been installed

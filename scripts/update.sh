@@ -18,7 +18,7 @@ _exists() {
 
 # Success reporter
 info() {
-  echo -e "\n  ⏺  ${*}${RESET}\n"
+  echo -e "\n ⏺  ${*}${RESET}\n"
 }
 
 show() {
@@ -27,16 +27,16 @@ show() {
 
 # Error reporter
 error() {
-  echo -e "${RED}${*}${RESET}"
+  echo -e "${RED}${*}${RESET}\n"
 }
 
 # Success reporter
 success() {
-  echo -e "\n  ✴️  ${ORANGE}${*}${RESET}\n"
+  echo -e "\n ✳️  ${GREEN}${*}${RESET}\n"
 }
 
 bye() {
-  echo -e "\n  💟  ${PURPLE}${*}${RESET}\n"
+  echo -e "\n 💟 ${PURPLE}${*}${RESET}\n"
 }
 
 # End section
@@ -69,8 +69,17 @@ update_dotfiles() {
   zplug clean --force
   zplug clear
   zplug update
+  source $HOME/.zshrc
 
   finish "All zplug packages are up to date."
+}
+
+update_oh_my_zsh() {
+  info "Check oh-my-zsh for updates."
+
+  upgrade_oh_my_zsh
+
+  finish "Awesomo, you have the latest version."
 }
 
 update_brew() {
@@ -116,16 +125,6 @@ update_npm() {
 
 on_finish() {
   bye "Happy Coding!"
-  # echo
-  # echo -ne $RED'-_-_-_-_-_-_-_-_-_-_-_-_-_-_'
-  # echo -e  $RESET$BOLD',------,'$RESET
-  # echo -ne $YELLOW'-_-_-_-_-_-_-_-_-_-_-_-_-_-_'
-  # echo -e  $RESET$BOLD'|   /\_/\\'$RESET
-  # echo -ne $GREEN'-_-_-_-_-_-_-_-_-_-_-_-_-_-'
-  # echo -e  $RESET$BOLD'~|__( ^ .^)'$RESET
-  # echo -ne $CYAN'-_-_-_-_-_-_-_-_-_-_-_-_-_-_'
-  # echo -e  $RESET$BOLD'""  ""'$RESET
-  # echo
 }
 
 on_error() {
@@ -137,6 +136,7 @@ on_error() {
 main() {
   on_start "$*"
   update_dotfiles "$*"
+  update_oh_my_zsh "$*"
   update_brew "$*"
   update_npm "$*"
   on_finish "$*"
