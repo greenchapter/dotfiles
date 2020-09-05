@@ -77,7 +77,7 @@ update_dotfiles() {
 update_oh_my_zsh() {
   info "Check oh-my-zsh for updates."
 
-  upgrade_oh_my_zsh
+  omz update
 
   finish "Awesomo, you have the latest version."
 }
