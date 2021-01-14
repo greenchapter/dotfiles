@@ -59,7 +59,7 @@ update_dotfiles() {
   info "Updating dotfiles..."
 
   cd $DOTFILES
-  git pull github master
+  git pull
   cd - > /dev/null 2>&1
 
   finish "Yeww! You have updated the dotfiles."
