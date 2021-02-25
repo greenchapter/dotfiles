@@ -18,7 +18,7 @@ _exists() {
 
 # Success reporter
 info() {
-  echo -e "\n ⏺  ${*}${RESET}\n"
+  echo -e "\n ⏺   ${*}${RESET}\n"
 }
 
 show() {
@@ -32,11 +32,11 @@ error() {
 
 # Success reporter
 success() {
-  echo -e "\n ✳️  ${GREEN}${*}${RESET}\n"
+  echo -e "\n ✳️   ${GREEN}${*}${RESET}\n"
 }
 
 bye() {
-  echo -e "\n 💟 ${PURPLE}${*}${RESET}\n"
+  echo -e "\n 💟   ${PURPLE}${*}${RESET}\n"
 }
 
 # End section
@@ -50,9 +50,20 @@ finish() {
 export DOTFILES=${1:-"$HOME/.dotfiles"}
 
 on_start() {
-  show '                                                '
-  show '              by @greenchapter                   '
-  show '                                                '
+
+  show ' '
+  show '
+    ___     ___   ______  _____  ____  _        ___  _____
+   |   \   /   \ |      ||     ||    || |      /  _]/ ___/
+   |    \ |     ||      ||   __| |  | | |     /  [_(   \_
+   |  D  ||  O  ||_|  |_||  |_   |  | | |___ |    _]\__  |
+   |     ||     |  |  |  |   _]  |  | |     ||   [_ /  \ |
+   |     ||     |  |  |  |  |    |  | |     ||     |\    |
+   |_____| \___/   |__|  |__|   |____||_____||_____| \___|
+  '
+  show '                    by @greenchapter'
+  show ' '
+  show ' '
 }
 
 update_dotfiles() {
