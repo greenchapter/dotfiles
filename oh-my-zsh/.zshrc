@@ -114,3 +114,5 @@ zplug load
 
 
 
+
+source /Users/thomas.ott/.config/broot/launcher/bash/br
