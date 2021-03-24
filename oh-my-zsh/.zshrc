@@ -73,10 +73,6 @@ else
   export EDITOR='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
 fi
 
-# zplug
-export ZPLUG_HOME=/usr/local/opt/zplug
-source $ZPLUG_HOME/init.zsh
-
 # Wasmer
 export WASMER_DIR="$HOME/.wasmer"
 [ -s "$WASMER_DIR/wasmer.sh" ] && source "$WASMER_DIR/wasmer.sh"
