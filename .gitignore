@@ -1,4 +1,4 @@
-*.local
+*.local.zsh
 # macos-related files
 .DS_Store
 # vim-related files

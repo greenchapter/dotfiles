@@ -18,25 +18,29 @@ _exists() {
 
 # Success reporter
 info() {
-  echo -e "\n  ⏺  ${*}${RESET}\n"
+  echo -e "\n ⏺  ${*}${RESET}\n"
 }
 
 show() {
   echo -e "${*}"
 }
 
+signature() {
+  echo -e "${ORANGE}${*}${RESET}"
+}
+
 # Error reporter
 error() {
-  echo -e "${RED}${*}${RESET}"
+  echo -e "${RED}${*}${RESET}\n"
 }
 
 # Success reporter
 success() {
-  echo -e "\n  ✴️  ${ORANGE}${*}${RESET}\n"
+  echo -e "\n ✳️  ${GREEN}${*}${RESET}\n"
 }
 
 bye() {
-  echo -e "\n  💟  ${PURPLE}${*}${RESET}\n"
+  echo -e "\n 💟 ${PURPLE}${*}${RESET}\n"
 }
 
 # End section
@@ -50,27 +54,51 @@ finish() {
 export DOTFILES=${1:-"$HOME/.dotfiles"}
 
 on_start() {
-  show '                                                '
-  show '              by @greenchapter                   '
-  show '                                                '
+
+  show ' '
+  show '
+    ___     ___   ______  _____  ____  _        ___  _____
+   |   \   /   \ |      ||     ||    || |      /  _]/ ___/
+   |    \ |     ||      ||   __| |  | | |     /  [_(   \_
+   |  D  ||  O  ||_|  |_||  |_   |  | | |___ |    _]\__  |
+   |     ||     |  |  |  |   _]  |  | |     ||   [_ /  \ |
+   |     ||     |  |  |  |  |    |  | |     ||     |\    |
+   |_____| \___/   |__|  |__|   |____||_____||_____| \___|
+  '
+  signature '                    by @greenchapter'
+  show ' '
+  show ' '
 }
 
 update_dotfiles() {
   info "Updating dotfiles..."
 
   cd $DOTFILES
-  git pull github master
+  git pull
   cd - > /dev/null 2>&1
 
-  finish "All zplug packages are up to date."
+  finish "Yeww! You have updated the dotfiles."
+}
 
+update_zplug() {
   info "Updating zplug packages..."
 
   zplug clean --force
   zplug clear
   zplug update
+  source $HOME/.zshrc
 
   finish "All zplug packages are up to date."
+}
+
+update_oh_my_zsh() {
+  info "Check oh-my-zsh for updates..."
+
+  cd $ZSH
+  git pull
+  cd - > /dev/null 2>&1
+
+  finish "Awesomo, you have the latest oh-my-zsh version."
 }
 
 update_brew() {
@@ -80,9 +108,7 @@ update_brew() {
 
   info "Updating Homebrew..."
 
-  brew update
-  brew upgrade
-  brew cleanup
+  brew update && brew upgrade && brew cleanup
 
   finish "All brew kegs are updated"
 }
@@ -116,27 +142,19 @@ update_npm() {
 
 on_finish() {
   bye "Happy Coding!"
-  # echo
-  # echo -ne $RED'-_-_-_-_-_-_-_-_-_-_-_-_-_-_'
-  # echo -e  $RESET$BOLD',------,'$RESET
-  # echo -ne $YELLOW'-_-_-_-_-_-_-_-_-_-_-_-_-_-_'
-  # echo -e  $RESET$BOLD'|   /\_/\\'$RESET
-  # echo -ne $GREEN'-_-_-_-_-_-_-_-_-_-_-_-_-_-'
-  # echo -e  $RESET$BOLD'~|__( ^ .^)'$RESET
-  # echo -ne $CYAN'-_-_-_-_-_-_-_-_-_-_-_-_-_-_'
-  # echo -e  $RESET$BOLD'""  ""'$RESET
-  # echo
 }
 
 on_error() {
   error "Wow... Something serious happened!"
-  error "Though, I don't know what really happened :("
+  error "There was an error updating. Try again later?"
   exit 1
 }
 
 main() {
   on_start "$*"
   update_dotfiles "$*"
+  update_oh_my_zsh "$*"
+  update_zplug "$*"
   update_brew "$*"
   update_npm "$*"
   on_finish "$*"
