@@ -18,7 +18,7 @@ _exists() {
 
 # Success reporter
 info() {
-  echo -e "\n ⏺   ${*}${RESET}\n"
+  echo -e "\n ⏺  ${*}${RESET}\n"
 }
 
 show() {
@@ -32,11 +32,11 @@ error() {
 
 # Success reporter
 success() {
-  echo -e "\n ✳️   ${GREEN}${*}${RESET}\n"
+  echo -e "\n ✳️  ${GREEN}${*}${RESET}\n"
 }
 
 bye() {
-  echo -e "\n 💟   ${PURPLE}${*}${RESET}\n"
+  echo -e "\n 💟  ${PURPLE}${*}${RESET}\n"
 }
 
 # End section
