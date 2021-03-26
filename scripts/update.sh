@@ -25,6 +25,10 @@ show() {
   echo -e "${*}"
 }
 
+signature() {
+  echo -e "${ORANGE}${*}${RESET}"
+}
+
 # Error reporter
 error() {
   echo -e "${RED}${*}${RESET}\n"
@@ -50,27 +54,51 @@ finish() {
 export DOTFILES=${1:-"$HOME/.dotfiles"}
 
 on_start() {
-  show '                                                '
-  show '              by @greenchapter                   '
-  show '                                                '
+
+  show ' '
+  show '
+    ___     ___   ______  _____  ____  _        ___  _____
+   |   \   /   \ |      ||     ||    || |      /  _]/ ___/
+   |    \ |     ||      ||   __| |  | | |     /  [_(   \_
+   |  D  ||  O  ||_|  |_||  |_   |  | | |___ |    _]\__  |
+   |     ||     |  |  |  |   _]  |  | |     ||   [_ /  \ |
+   |     ||     |  |  |  |  |    |  | |     ||     |\    |
+   |_____| \___/   |__|  |__|   |____||_____||_____| \___|
+  '
+  signature '                    by @greenchapter'
+  show ' '
+  show ' '
 }
 
 update_dotfiles() {
   info "Updating dotfiles..."
 
   cd $DOTFILES
-  git pull github master
+  git pull
   cd - > /dev/null 2>&1
 
   finish "Yeww! You have updated the dotfiles."
+}
 
+update_zplug() {
   info "Updating zplug packages..."
 
   zplug clean --force
   zplug clear
   zplug update
+  source $HOME/.zshrc
 
   finish "All zplug packages are up to date."
+}
+
+update_oh_my_zsh() {
+  info "Check oh-my-zsh for updates..."
+
+  cd $ZSH
+  git pull
+  cd - > /dev/null 2>&1
+
+  finish "Awesomo, you have the latest oh-my-zsh version."
 }
 
 update_brew() {
@@ -80,9 +108,7 @@ update_brew() {
 
   info "Updating Homebrew..."
 
-  brew update
-  brew upgrade
-  brew cleanup
+  brew update && brew upgrade && brew cleanup
 
   finish "All brew kegs are updated"
 }
@@ -127,6 +153,8 @@ on_error() {
 main() {
   on_start "$*"
   update_dotfiles "$*"
+  update_oh_my_zsh "$*"
+  update_zplug "$*"
   update_brew "$*"
   update_npm "$*"
   on_finish "$*"
