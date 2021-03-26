@@ -4,6 +4,7 @@ filetype off
 
 set rtp+=~/.vim/bundle/Vundle.vim
 set rtp+=/usr/local/opt/fzf
+set guioptions=
 
 call vundle#begin()
 
