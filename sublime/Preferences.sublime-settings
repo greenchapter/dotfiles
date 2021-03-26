@@ -1,5 +1,21 @@
 {
+	"auto_complete": true,
 	"auto_complete_selector": true,
+	"auto_complete_triggers":
+	[
+		{
+			"characters": ".(){}[],'\"=<>/\\+-|&*%=$#@! ",
+			"selector": "source.python"
+		},
+		{
+			"characters": ":.(){}[],'\"=<>/\\+-|&*%=$#@! ",
+			"selector": "source & - source.python - constant.numeric"
+		},
+		{
+			"characters": " qazwsxedcrfvtgbyhnujmikolpQAZWSXEDCRFVTGBYHNUJMIKOLP",
+			"selector": "text"
+		}
+	],
 	"bold_folder_labels": true,
 	"city_lights_tabs_big": true,
 	"close_windows_when_empty": true,

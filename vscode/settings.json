@@ -13,5 +13,8 @@
     },
     "terminal.integrated.shell.osx": "/bin/zsh",
     "terminal.integrated.lineHeight": 1.2,
-    "codespaces.accountProvider": "Microsoft"
+    "codespaces.accountProvider": "Microsoft",
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
 }
