@@ -57,8 +57,10 @@ source $ZSH/oh-my-zsh.sh
 ### User configuration
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export MANPATH="/usr/local/man:$MANPATH"
+
 # SSH private key path
 export SSH_KEY_PATH="~/.ssh/rsa_id"
+
 # Add Visual Studio Code to the prompt
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 
@@ -70,12 +72,8 @@ fpath=(/usr/local/share/zsh-completions $fpath)
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
 else
-  export EDITOR='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
+  export EDITOR='mvim'
 fi
-
-# zplug
-export ZPLUG_HOME=/usr/local/opt/zplug
-source $ZPLUG_HOME/init.zsh
 
 # Wasmer
 export WASMER_DIR="$HOME/.wasmer"
@@ -111,6 +109,3 @@ fi
 
 # Then, source plugins and add commands to $PATH
 zplug load
-
-
-

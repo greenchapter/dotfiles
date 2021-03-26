@@ -237,10 +237,6 @@
 	<true/>
 	<key>MaxVertically</key>
 	<false/>
-	<key>NeverWarnAboutShortLivedSessions_E3F73A31-7705-4548-95F3-23699F072AC5</key>
-	<true/>
-	<key>NeverWarnAboutShortLivedSessions_E3F73A31-7705-4548-95F3-23699F072AC5_selection</key>
-	<integer>0</integer>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -500,8 +496,6 @@
 			<string>No</string>
 			<key>Custom Directory</key>
 			<string>No</string>
-			<key>Custom Icon Path</key>
-			<string>/Users/thomas.ott/Documents/Screenshot 2020-10-07 at 11.36.24.png</string>
 			<key>Default Bookmark</key>
 			<string>No</string>
 			<key>Description</key>
@@ -527,8 +521,6 @@
 			<string>E3F73A31-7705-4548-95F3-23699F072AC5</string>
 			<key>Horizontal Spacing</key>
 			<real>0.94999999999999996</real>
-			<key>Icon</key>
-			<integer>0</integer>
 			<key>Idle Code</key>
 			<integer>0</integer>
 			<key>Jobs to Ignore</key>
@@ -837,7 +829,7 @@
 			<key>Minimum Contrast</key>
 			<real>0.0</real>
 			<key>Mouse Reporting</key>
-			<false/>
+			<true/>
 			<key>Name</key>
 			<string>Supercharged </string>
 			<key>Non Ascii Font</key>
@@ -1234,9 +1226,9 @@
 			<string>/Users/thomas.ott</string>
 		</dict>
 	</array>
-	<key>OpenTmuxWindowsIn</key>
-	<integer>0</integer>
-	<key>PMPrintingExpandedStateForPrint2</key>
+	<key>OpenArrangementAtStartup</key>
+	<false/>
+	<key>OpenNoWindowsAtStartup</key>
 	<false/>
 	<key>PointerActions</key>
 	<dict>
@@ -1271,13 +1263,9 @@
 			<string>kNextWindowPointerAction</string>
 		</dict>
 	</dict>
-	<key>Print In Black And White</key>
-	<true/>
 	<key>RightOption</key>
 	<integer>3</integer>
 	<key>ShowBookmarkName</key>
-	<false/>
-	<key>SmartPlacement</key>
 	<false/>
 	<key>SoundForEsc</key>
 	<false/>
@@ -1287,13 +1275,10 @@
 	<true/>
 	<key>TabStyleWithAutomaticOption</key>
 	<integer>4</integer>
-	<key>TabViewType</key>
-	<integer>0</integer>
 	<key>ToolbeltTools</key>
 	<array>
 		<string>Profiles</string>
-		<string>Snippets</string>
-		<string>Notes</string>
+		<string>Command History</string>
 	</array>
 	<key>VisualIndicatorForEsc</key>
 	<false/>
