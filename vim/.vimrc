@@ -14,7 +14,7 @@ Plugin 'hail2u/vim-css3-syntax'
 Plugin 'Raimondi/delimitMate'
 Plugin 'vim-airline/vim-airline'
 Plugin 'tpope/vim-commentary'
-Plugin 'scrooloose/nerdtree'
+Plugin 'preservim/nerdtree'
 Plugin 'lervag/vimtex'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'vim-syntastic/syntastic'
@@ -65,3 +65,8 @@ fun! <SID>StripTrailingWhitespaces()
 endfun
 autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 :autocmd BufNewFile *.html 0r ~/.vim/templates/html.tpl
+
+let NERDTreeShowHidden=1
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists('s:std_in') |
+    \ execute 'NERDTree' argv()[0] | wincmd p | enew | execute 'cd '.argv()[0] | endif
