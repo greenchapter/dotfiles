@@ -25,6 +25,10 @@ show() {
   echo -e "${*}"
 }
 
+signature() {
+  echo -e "${ORANGE}${*}${RESET}"
+}
+
 # Error reporter
 error() {
   echo -e "${RED}${*}${RESET}\n"
@@ -61,7 +65,7 @@ on_start() {
    |     ||     |  |  |  |  |    |  | |     ||     |\    |
    |_____| \___/   |__|  |__|   |____||_____||_____| \___|
   '
-  show '                    by @greenchapter'
+  signature '                    by @greenchapter'
   show ' '
   show ' '
 }
@@ -74,7 +78,9 @@ update_dotfiles() {
   cd - > /dev/null 2>&1
 
   finish "Yeww! You have updated the dotfiles."
+}
 
+update_zplug() {
   info "Updating zplug packages..."
 
   zplug clean --force
@@ -86,11 +92,13 @@ update_dotfiles() {
 }
 
 update_oh_my_zsh() {
-  info "Check oh-my-zsh for updates."
+  info "Check oh-my-zsh for updates..."
 
-  omz update --unattended
+  cd $ZSH
+  git pull
+  cd - > /dev/null 2>&1
 
-  finish "Awesomo, you have the latest version."
+  finish "Awesomo, you have the latest oh-my-zsh version."
 }
 
 update_brew() {
@@ -100,9 +108,7 @@ update_brew() {
 
   info "Updating Homebrew..."
 
-  brew update
-  brew upgrade
-  brew cleanup
+  brew update && brew upgrade && brew cleanup
 
   finish "All brew kegs are updated"
 }
@@ -148,6 +154,7 @@ main() {
   on_start "$*"
   update_dotfiles "$*"
   update_oh_my_zsh "$*"
+  update_zplug "$*"
   update_brew "$*"
   update_npm "$*"
   on_finish "$*"
