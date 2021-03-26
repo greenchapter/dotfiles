@@ -6,6 +6,9 @@
 # Based on Gerald baeck Bootstrap Script
 # - https://github.com/geraldbaeck/dotfiles/blob/master/osx_scripts/osx_bootstrap.sh
 
+# git config --global --add difftool.prompt false
+# git config --global diff.tool opendiff
+
 echo "\n\n     Start bootstrapping your new mac.\n"
 echo -n "       .----.\n"
 echo -n "       |\033[1m>_\033[0m  |\n"
