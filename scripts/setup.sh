@@ -6,6 +6,9 @@
 # Based on Gerald baeck Bootstrap Script
 # - https://github.com/geraldbaeck/dotfiles/blob/master/osx_scripts/osx_bootstrap.sh
 
+# git config --global --add difftool.prompt false
+# git config --global diff.tool opendiff
+
 echo "🚀  Start bootstrapping your new mac."
 
 # get sudo rights for all the things
