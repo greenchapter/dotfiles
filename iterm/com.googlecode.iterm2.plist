@@ -4,6 +4,8 @@
 <dict>
 	<key>AlternateMouseScroll</key>
 	<true/>
+	<key>BellRateLimit</key>
+	<real>0.30000001192092896</real>
 	<key>Custom Color Presets</key>
 	<dict>
 		<key>Dracula</key>
@@ -889,7 +891,7 @@
 			<key>Show Status Bar</key>
 			<false/>
 			<key>Silence Bell</key>
-			<false/>
+			<true/>
 			<key>Smart Cursor Color</key>
 			<false/>
 			<key>Status Bar Layout</key>
@@ -1219,7 +1221,7 @@
 			<key>Vertical Spacing</key>
 			<real>1.1699999999999999</real>
 			<key>Visual Bell</key>
-			<true/>
+			<false/>
 			<key>Window Type</key>
 			<integer>0</integer>
 			<key>Working Directory</key>
@@ -1280,6 +1282,8 @@
 		<string>Profiles</string>
 		<string>Command History</string>
 	</array>
+	<key>TraditionalVisualBell</key>
+	<false/>
 	<key>VisualIndicatorForEsc</key>
 	<false/>
 	<key>WordCharacters</key>

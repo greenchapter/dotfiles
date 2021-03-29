@@ -69,6 +69,7 @@ function nvm_prompt_version {
 # deactivate NVM lazy loading
 export NVM_LAZY_LOAD=false
 
+export BAT_PAGER="less -asrRix8G"
 
 ### User configuration
 export PATH=$HOME/bin:/usr/local/bin:$PATH
