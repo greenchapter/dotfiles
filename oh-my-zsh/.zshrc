@@ -54,22 +54,17 @@ plugins=(history-substring-search tmux git sublime vscode git-extras nvm extract
 
 source $ZSH/oh-my-zsh.sh
 
-
 # restyle the zsh prompt
-e='\033'
-BOLD="${e}[1m"
 function nvm_prompt_version {
     if which nvm &> /dev/null; then
         if [[ $(nvm version) != "system" ]]; then
-          echo -e "${BOLD}($(nvm version | cut -c2-))${RESET} "
+          echo -e "($(nvm version | cut -c2-)) "
         fi
     fi
 }
 
 # deactivate NVM lazy loading
 export NVM_LAZY_LOAD=false
-
-export BAT_PAGER="less -asrRix8G"
 
 ### User configuration
 export PATH=$HOME/bin:/usr/local/bin:$PATH
