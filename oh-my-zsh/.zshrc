@@ -16,6 +16,8 @@ ZSH_THEME="lukerandall"
 
 DEFAULT_USER=`whoami`
 
+DISABLE_AUTO_UPDATE="true"
+
 # Set to this to use case-sensitive completion
 CASE_SENSITIVE="true"
 
