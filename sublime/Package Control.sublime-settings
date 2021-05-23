@@ -13,6 +13,7 @@
 		"EditorConfig",
 		"Git blame",
 		"GitGutter",
+		"JSONLint",
 		"JsPrettier",
 		"MarkdownEditing",
 		"MarkdownPreview",
@@ -27,6 +28,6 @@
 		"Terraform",
 		"Theme - City Lights",
 		"TypeScript",
-		"Vue Syntax Highlight"
-	]
+		"Vue Syntax Highlight",
+	],
 }
