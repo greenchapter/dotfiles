@@ -1,6 +1,7 @@
 # Set locales
 export LC_CTYPE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
+export BAT_PAGER="less -RF"
 
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
