@@ -107,6 +107,8 @@ source <(kubectl completion zsh)
 export ZPLUG_HOME=/usr/local/opt/zplug
 source $ZPLUG_HOME/init.zsh
 
+export BAT_PAGER="less -R"
+
 # Let zplug manage itself like other packages
 zplug 'zplug/zplug', hook-build:'zplug --self-manage'
 

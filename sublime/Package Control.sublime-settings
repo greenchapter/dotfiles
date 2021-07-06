@@ -13,6 +13,7 @@
 		"EditorConfig",
 		"Git blame",
 		"GitGutter",
+		"JSONLint",
 		"JsPrettier",
 		"MarkdownEditing",
 		"MarkdownPreview",
