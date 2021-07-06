@@ -100,6 +100,9 @@ export PATH="/usr/local/sbin:$PATH"
 #Rust Packagemanager Cargo
 source $HOME/.cargo/env
 
+# kubectl completion
+source <(kubectl completion zsh)
+
 # ZSH plugin manager zplug
 export ZPLUG_HOME=/usr/local/opt/zplug
 source $ZPLUG_HOME/init.zsh
@@ -122,5 +125,5 @@ if ! zplug check --verbose; then
   zplug install
 fi
 
-# Then, source plugins and add commands to $PATH
+# Then, source plugins and add commands to $PAT
 zplug load
