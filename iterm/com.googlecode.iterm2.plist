@@ -1285,7 +1285,6 @@
 	<integer>4</integer>
 	<key>ToolbeltTools</key>
 	<array>
-		<string>Profiles</string>
 		<string>Command History</string>
 	</array>
 	<key>TraditionalVisualBell</key>
