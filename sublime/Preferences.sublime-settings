@@ -5,15 +5,15 @@
 	[
 		{
 			"characters": ".(){}[],'\"=<>/\\+-|&*%=$#@! ",
-			"selector": "source.python"
+			"selector": "source.python",
 		},
 		{
 			"characters": ":.(){}[],'\"=<>/\\+-|&*%=$#@! ",
-			"selector": "source & - source.python - constant.numeric"
+			"selector": "source & - source.python - constant.numeric",
 		},
 		{
 			"characters": " qazwsxedcrfvtgbyhnujmikolpQAZWSXEDCRFVTGBYHNUJMIKOLP",
-			"selector": "text"
+			"selector": "text",
 		}
 	],
 	"bold_folder_labels": true,
@@ -36,7 +36,7 @@
 		"bower_components"
 	],
 	"font_face": "Source Code Pro for Powerline Regular",
-	"font_size": 12,
+	"font_size": 13,
 	"ha_style": "filled",
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
@@ -44,7 +44,7 @@
 	"ignored_packages":
 	[
 		"JavaScript",
-		"Markdown"
+		"Markdown",
 	],
 	"line_padding_bottom": 3,
 	"line_padding_top": 3,
@@ -63,5 +63,5 @@
 	"tree_animation_enabled": false,
 	"trim_trailing_white_space_on_save": true,
 	"wide_caret": true,
-	"word_wrap": true
+	"word_wrap": true,
 }

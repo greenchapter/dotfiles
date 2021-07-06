@@ -18,7 +18,6 @@
 		"MarkdownPreview",
 		"nginx",
 		"Package Control",
-		"Sass",
 		"SublimeCodeIntel",
 		"SublimeLinter",
 		"SublimeLinter-contrib-sass-lint",
@@ -27,6 +26,6 @@
 		"Terraform",
 		"Theme - City Lights",
 		"TypeScript",
-		"Vue Syntax Highlight"
-	]
+		"Vue Syntax Highlight",
+	],
 }
