@@ -38,3 +38,4 @@ alias le="exa -lga --git"
 alias lle="exa -Ta"
 alias py="python3"
 alias gdk="git difftool"
+

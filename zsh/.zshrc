@@ -16,46 +16,24 @@ SUPERCHARGED=$HOME/.dotfiles
 ZSH_THEME="lukerandall"
 
 DEFAULT_USER=`whoami`
-
 DISABLE_AUTO_UPDATE="true"
 
 # Set to this to use case-sensitive completion
 CASE_SENSITIVE="true"
 
-# Uncomment this to disable bi-weekly auto-update checks
-# DISABLE_AUTO_UPDATE="true"
-
-# Uncomment to change how often before auto-updates occur? (in days)
-# export UPDATE_ZSH_DAYS=7
-
-# Uncomment following line if you want to disable colors in ls
-# DISABLE_LS_COLORS="true"
-
-# Uncomment following line if you want to disable autosetting terminal title.
-# DISABLE_AUTO_TITLE="true"
-
-# Uncomment following line if you want to disable command autocorrection
-# DISABLE_CORRECTION="true"
-
 # Uncomment following line if you want red dots to be displayed while waiting for completion
 COMPLETION_WAITING_DOTS="true"
 
-# Uncomment following line if you want to disable marking untracked files under
-# VCS as dirty. This makes repository status check for large repositories much,
-# much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
+### User configuration
+export PATH=$HOME/bin:/usr/local/bin:$PATH
+export MANPATH="/usr/local/man:$MANPATH"
 
-# Uncomment following line if you want to  shown in the command execution time stamp
-# in the history command output. The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|
-# yyyy-mm-dd
-# HIST_STAMPS="mm/dd/yyyy"
-
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(history-substring-search tmux git sublime vscode git-extras nvm extract last-working-dir npm docker encode64 zsh-autosuggestions)
+plugins=(history-substring-search git sublime vscode git-extras nvm extract last-working-dir npm docker encode64 zsh-autosuggestions zsh-fzf-history-search kubectl)
 
 source $ZSH/oh-my-zsh.sh
+
+source <(kubectl completion zsh)
 
 # restyle the zsh prompt
 function nvm_prompt_version {
@@ -69,9 +47,6 @@ function nvm_prompt_version {
 # deactivate NVM lazy loading
 export NVM_LAZY_LOAD=false
 
-### User configuration
-export PATH=$HOME/bin:/usr/local/bin:$PATH
-export MANPATH="/usr/local/man:$MANPATH"
 
 # SSH private key path
 export SSH_KEY_PATH="~/.ssh/rsa_id"
@@ -87,7 +62,7 @@ fpath=(/usr/local/share/zsh-completions $fpath)
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
 else
-  export EDITOR='mvim'
+  export EDITOR='nvim'
 fi
 
 # Wasmer
@@ -97,35 +72,26 @@ export PATH="/usr/local/sbin:$PATH"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-#Rust Packagemanager Cargo
-source $HOME/.cargo/env
-
-# kubectl completion
-source <(kubectl completion zsh)
-
-# ZSH plugin manager zplug
-export ZPLUG_HOME=/usr/local/opt/zplug
+export ZPLUG_HOME=/opt/homebrew/opt/zplug
 source $ZPLUG_HOME/init.zsh
 
-export BAT_PAGER="less -R"
+# Dotfiles
+zplug "$SUPERCHARGED/zsh/custom", from:local
 
 # Let zplug manage itself like other packages
 zplug 'zplug/zplug', hook-build:'zplug --self-manage'
 
-# oh-My-Zsh core
-# zplug "lib/*", from:oh-my-zsh
-
-#Extra
+# Extra
 zplug "lukechilds/zsh-better-npm-completion", defer:2
-zplug "webyneter/docker-aliases", use:docker-aliases.plugin.zsh
-
-# Dotfiles
-zplug "$SUPERCHARGED/custom", from:local
 
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
   zplug install
 fi
 
-# Then, source plugins and add commands to $PAT
 zplug load
+
+# Then, source plugins and add commands to $PATH
+export PATH="/opt/homebrew/bin:$PATH"
+export PATH="/opt/homebrew/sbin:$PATH"
+export PATH="/opt/homebrew/sbin:$PATH"
