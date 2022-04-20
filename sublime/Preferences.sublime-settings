@@ -1,19 +1,18 @@
 {
 	"auto_complete": true,
 	"auto_complete_selector": true,
-	"auto_complete_triggers":
-	[
+	"auto_complete_triggers": [
 		{
 			"characters": ".(){}[],'\"=<>/\\+-|&*%=$#@! ",
-			"selector": "source.python",
+			"selector": "source.python"
 		},
 		{
 			"characters": ":.(){}[],'\"=<>/\\+-|&*%=$#@! ",
-			"selector": "source & - source.python - constant.numeric",
+			"selector": "source & - source.python - constant.numeric"
 		},
 		{
 			"characters": " qazwsxedcrfvtgbyhnujmikolpQAZWSXEDCRFVTGBYHNUJMIKOLP",
-			"selector": "text",
+			"selector": "text"
 		}
 	],
 	"bold_folder_labels": true,
@@ -25,15 +24,14 @@
 	"ensure_newline_at_eof_on_save": true,
 	"fade_fold_buttons": true,
 	"find_selected_text": true,
-	"folder_exclude_patterns":
-	[
+	"folder_exclude_patterns": [
 		".git",
 		".gitkeep",
 		".sass-cache",
 		".cache",
 		"tmp",
 		"node_modules",
-		"bower_components",
+		"bower_components"
 	],
 	"font_face": "JetBrains Mono",
 	"font_size": 14,
@@ -41,19 +39,12 @@
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
 	"hot_exit": false,
-	"ignored_packages":
-	[
-		"JavaScript",
-		"Markdown",
-	],
+	"ignored_packages": ["JavaScript", "Markdown"],
 	"line_padding_bottom": 1.8,
 	"line_padding_top": 1.8,
 	"preview_on_click": false,
 	"remember_open_files": false,
-	"rulers":
-	[
-		85
-	],
+	"rulers": [85],
 	"show_full_path": true,
 	"soda_classic_tabs": true,
 	"soda_folder_icons": false,
@@ -63,5 +54,5 @@
 	"tree_animation_enabled": false,
 	"trim_trailing_white_space_on_save": true,
 	"wide_caret": true,
-	"word_wrap": true,
+	"word_wrap": true
 }

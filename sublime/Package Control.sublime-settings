@@ -1,10 +1,7 @@
 {
 	"bootstrapped": true,
-	"in_process_packages":
-	[
-	],
-	"installed_packages":
-	[
+	"in_process_packages": [],
+	"installed_packages": [
 		"All Autocomplete",
 		"Babel",
 		"Color Highlighter",
@@ -23,6 +20,6 @@
 		"Svelte",
 		"Terraform",
 		"Theme - City Lights",
-		"TypeScript",
-	],
+		"TypeScript"
+	]
 }
