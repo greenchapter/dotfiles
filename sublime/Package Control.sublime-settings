@@ -1,10 +1,7 @@
 {
 	"bootstrapped": true,
-	"in_process_packages":
-	[
-	],
-	"installed_packages":
-	[
+	"in_process_packages": [],
+	"installed_packages": [
 		"All Autocomplete",
 		"Babel",
 		"Color Highlighter",
@@ -17,16 +14,12 @@
 		"JsPrettier",
 		"MarkdownEditing",
 		"MarkdownPreview",
-		"nginx",
 		"Package Control",
-		"SublimeCodeIntel",
 		"SublimeLinter",
-		"SublimeLinter-contrib-sass-lint",
 		"SublimeLinter-tslint",
 		"Svelte",
 		"Terraform",
 		"Theme - City Lights",
-		"TypeScript",
-		"Vue Syntax Highlight",
-	],
+		"TypeScript"
+	]
 }
