@@ -1,5 +1,11 @@
 {
-  "Thin Strokes" : 0,
+  "Ansi 5 Color" : {
+    "Red Component" : 0.9637451171875,
+    "Color Space" : "sRGB",
+    "Blue Component" : 0.75890740260071698,
+    "Alpha Component" : 1,
+    "Green Component" : 0.48869594931602478
+  },
   "Working Directory" : "~",
   "Prompt Before Closing 2" : false,
   "Selected Text Color" : {
@@ -221,6 +227,7 @@
       }
     }
   },
+  "Brighten Bold Text" : true,
   "Flashing Bell" : false,
   "Cursor Guide Color" : {
     "Red Component" : 0.70213186740875244,
@@ -469,7 +476,7 @@
     "Alpha Component" : 1,
     "Green Component" : 0.55686274509803924
   },
-  "Name" : "Supercharged ",
+  "Name" : "Supercharged",
   "Blinking Cursor" : false,
   "Guid" : "E3F73A31-7705-4548-95F3-23699F072AC5",
   "Idle Code" : 0,
@@ -529,9 +536,11 @@
   },
   "Transparency" : 0,
   "Background Color" : {
-    "Green Component" : 0.12215272337198257,
-    "Blue Component" : 0.15977837145328522,
-    "Red Component" : 0.11765811592340469
+    "Red Component" : 0.15686274509803921,
+    "Color Space" : "sRGB",
+    "Blue Component" : 0.21176470588235294,
+    "Alpha Component" : 1,
+    "Green Component" : 0.16470588235294117
   },
   "Screen" : -1,
   "Initial Use Transparency" : false,
@@ -545,10 +554,6 @@
   "Use Tab Color" : false,
   "Visual Bell" : false,
   "Custom Directory" : "No",
-  "Ansi 5 Color" : {
-    "Green Component" : 0.47450980392156861,
-    "Blue Component" : 0.77647058823529413,
-    "Red Component" : 1
-  },
-  "ASCII Ligatures" : true
+  "ASCII Ligatures" : false,
+  "Thin Strokes" : 0
 }
