@@ -24,14 +24,21 @@ CASE_SENSITIVE="true"
 # Uncomment following line if you want red dots to be displayed while waiting for completion
 COMPLETION_WAITING_DOTS="true"
 
-### User configuration
+# Then, source plugins and add commands to $PATH
 export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH="/opt/homebrew/bin:$PATH"
+export PATH="/opt/homebrew/sbin:$PATH"
+export PATH="/opt/homebrew/sbin:$PATH"
 export MANPATH="/usr/local/man:$MANPATH"
 
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 plugins=(history-substring-search git sublime vscode git-extras nvm extract last-working-dir npm docker encode64 zsh-autosuggestions zsh-fzf-history-search kubectl)
 
 source $ZSH/oh-my-zsh.sh
+
+for file in "$SUPERCHARGED"/zsh/custom/*.zsh; do
+    source "$file"
+done
 
 source <(kubectl completion zsh)
 
@@ -46,7 +53,6 @@ function nvm_prompt_version {
 
 # deactivate NVM lazy loading
 export NVM_LAZY_LOAD=false
-
 
 # SSH private key path
 export SSH_KEY_PATH="~/.ssh/rsa_id"
@@ -65,33 +71,4 @@ else
   export EDITOR='nvim'
 fi
 
-# Wasmer
-export WASMER_DIR="$HOME/.wasmer"
-[ -s "$WASMER_DIR/wasmer.sh" ] && source "$WASMER_DIR/wasmer.sh"
-export PATH="/usr/local/sbin:$PATH"
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-export ZPLUG_HOME=/opt/homebrew/opt/zplug
-source $ZPLUG_HOME/init.zsh
-
-# Dotfiles
-zplug "$SUPERCHARGED/zsh/custom", from:local
-
-# Let zplug manage itself like other packages
-zplug 'zplug/zplug', hook-build:'zplug --self-manage'
-
-# Extra
-zplug "lukechilds/zsh-better-npm-completion", defer:2
-
-# Install plugins if there are plugins that have not been installed
-if ! zplug check --verbose; then
-  zplug install
-fi
-
-zplug load
-
-# Then, source plugins and add commands to $PATH
-export PATH="/opt/homebrew/bin:$PATH"
-export PATH="/opt/homebrew/sbin:$PATH"
-export PATH="/opt/homebrew/sbin:$PATH"

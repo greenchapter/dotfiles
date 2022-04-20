@@ -1,8 +1,8 @@
 # General
 alias update='source $SUPERCHARGED/scripts/update.sh'
 alias dots='cd $SUPERCHARGED'
-alias zshconfig="$EDITOR $HOME/.zshrc"
-alias reload="zplug update && source $HOME/.zshrc"
+alias zshconfig="$EDITOR $SUPERCHARGED/zsh/custom/custom.local.zsh"
+alias reload="source ~/.zshrc"
 
 ## TAR Tooling
 alias pack='f() { tar -cvf $1.tar $1};f'
@@ -22,9 +22,7 @@ alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
 ## Shell Aliases
 alias tconfig="$EDITOR ~/.tmux.conf"
 
-if _exists pbcopy; then
-  alias password='openssl rand -base64 ${1:-22} | pbcopy ; echo "$(pbpaste)"'
-fi
+alias password='openssl rand -base64 ${1:-22} | pbcopy ; echo "$(pbpaste)"'
 
 alias cat='bat'
 alias ping='prettyping --nolegend'
@@ -38,10 +36,3 @@ alias le="exa -lga --git"
 alias lle="exa -Ta"
 alias py="python3"
 alias gdk="git difftool"
-
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/thomas/.google-cloud-sdk/path.zsh.inc' ]; then . '/Users/thomas/.google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/thomas/.google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/thomas/.google-cloud-sdk/completion.zsh.inc'; fi
