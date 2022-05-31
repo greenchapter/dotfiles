@@ -4,15 +4,15 @@
 	"auto_complete_triggers": [
 		{
 			"characters": ".(){}[],'\"=<>/\\+-|&*%=$#@! ",
-			"selector": "source.python"
+			"selector": "source.python",
 		},
 		{
 			"characters": ":.(){}[],'\"=<>/\\+-|&*%=$#@! ",
-			"selector": "source & - source.python - constant.numeric"
+			"selector": "source & - source.python - constant.numeric",
 		},
 		{
 			"characters": " qazwsxedcrfvtgbyhnujmikolpQAZWSXEDCRFVTGBYHNUJMIKOLP",
-			"selector": "text"
+			"selector": "text",
 		}
 	],
 	"bold_folder_labels": true,
@@ -39,7 +39,8 @@
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
 	"hot_exit": false,
-	"ignored_packages": ["JavaScript", "Markdown"],
+	"ignored_packages": ["JavaScript", "Markdown",
+	],
 	"line_padding_bottom": 1.8,
 	"line_padding_top": 1.8,
 	"preview_on_click": false,
@@ -54,5 +55,5 @@
 	"tree_animation_enabled": false,
 	"trim_trailing_white_space_on_save": true,
 	"wide_caret": true,
-	"word_wrap": true
+	"word_wrap": true,
 }
