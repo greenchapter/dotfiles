@@ -1,5 +1,9 @@
 # Install vim-plug
 
+```bash
+ln -s ~/.dotfiles/vim/.vimrc
+```
+
 https://github.com/junegunn/vim-plug
 
 ```bash
