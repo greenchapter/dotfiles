@@ -24,7 +24,7 @@ alias tconfig="$EDITOR ~/.tmux.conf"
 
 alias password='openssl rand -base64 ${1:-22} | pbcopy ; echo "$(pbpaste)"'
 
-alias cat='bat'
+alias cat='bat --style=plain,header,grid'
 alias ping='prettyping --nolegend'
 alias preview="fzf --preview 'bat --color \"always\" {}'"
 alias top="htop"

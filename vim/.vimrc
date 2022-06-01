@@ -5,23 +5,25 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 set rtp+=/usr/local/opt/fzf
 set guioptions=
+set backspace=indent,eol,start
 
-call vundle#begin()
 
-Plugin 'dracula/vim'
-Plugin 'othree/yajs.vim'
-Plugin 'othree/html5.vim'
-Plugin 'hail2u/vim-css3-syntax'
-Plugin 'Raimondi/delimitMate'
-Plugin 'vim-airline/vim-airline'
-Plugin 'tpope/vim-commentary'
-Plugin 'preservim/nerdtree'
-Plugin 'lervag/vimtex'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'vim-syntastic/syntastic'
-Plugin 'ctrlpvim/ctrlp.vim'
+call plug#begin()
 
-call vundle#end()
+Plug 'dracula/vim'
+Plug 'othree/yajs.vim'
+Plug 'othree/html5.vim'
+Plug 'hail2u/vim-css3-syntax'
+Plug 'Raimondi/delimitMate'
+Plug 'vim-airline/vim-airline'
+Plug 'tpope/vim-commentary'
+Plug 'preservim/nerdtree'
+Plug 'lervag/vimtex'
+Plug 'airblade/vim-gitgutter'
+Plug 'vim-syntastic/syntastic'
+Plug 'ctrlpvim/ctrlp.vim'
+
+call plug#end()
 
 filetype plugin indent on
 
