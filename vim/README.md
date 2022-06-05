@@ -1,4 +1,4 @@
-# VIM Readme
+# ✍️ VIM
 ## Install with `vim-plug`
 
 https://github.com/junegunn/vim-plug
@@ -11,7 +11,6 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 
 
 ## Commands
-
 ### VIM
 | Description   |      Command      |
 |----------|:-------------:|
@@ -19,6 +18,8 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 | Jump between windows | `^+w` `<cursor>` |
 | Delete a file | `:!rm <filename>` |
 | Jump between tabs | `gt` |
+| Delete line | `dd` |
+| Duplicate line | `y` `p` |
 
 
 ### NERDTree
