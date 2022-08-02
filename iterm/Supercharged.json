@@ -627,7 +627,7 @@
   },
   "Columns" : 150,
   "Use Tab Color" : false,
-  "Visual Bell" : false,
+  "Visual Bell" : true,
   "Custom Directory" : "No",
   "Ansi 5 Color" : {
     "Red Component" : 0.9637451171875,
