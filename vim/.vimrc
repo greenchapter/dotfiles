@@ -2,6 +2,10 @@ set nocompatible
 set encoding=utf-8 nobomb
 filetype off
 
+set ttimeout
+set ttimeoutlen=50
+set timeoutlen=3000
+
 set rtp+=~/.vim/bundle/Vundle.vim
 set rtp+=/usr/local/opt/fzf
 set guioptions=
