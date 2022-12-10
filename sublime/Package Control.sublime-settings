@@ -21,6 +21,8 @@
 		"Svelte",
 		"Terraform",
 		"Theme - City Lights",
-		"TypeScript"
+		"TOML",
+		"TypeScript",
+		"Vue Syntax Highlight",
 	],
 }
