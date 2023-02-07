@@ -27,7 +27,6 @@ alias password='openssl rand -base64 ${1:-22} | pbcopy ; echo "$(pbpaste)"'
 alias cat='bat --style=plain,header,grid'
 alias ping='prettyping --nolegend'
 alias preview="fzf --preview 'bat --color \"always\" {}'"
-alias top="htop"
 alias edit='"$EDITOR" $(preview)'
 alias top="htop"
 alias l="ls -lahF"
@@ -36,3 +35,7 @@ alias le="exa -lga --git"
 alias lle="exa -Ta"
 alias py="python3"
 alias gdk="git difftool"
+
+# Kubernetes
+export do='--dry-run=client -o yaml' # This way you can just run k run pod --image=nginx $do.
+export now="--force --grace-period O" # This way you can run k delete pod $now
