@@ -2,6 +2,10 @@ set nocompatible
 set encoding=utf-8 nobomb
 filetype off
 
+set ttimeout
+set ttimeoutlen=50
+set timeoutlen=3000
+
 set rtp+=~/.vim/bundle/Vundle.vim
 set rtp+=/usr/local/opt/fzf
 set guioptions=
@@ -22,6 +26,7 @@ Plug 'lervag/vimtex'
 Plug 'airblade/vim-gitgutter'
 Plug 'vim-syntastic/syntastic'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'tpope/vim-fugitive'
 
 call plug#end()
 
@@ -30,8 +35,6 @@ filetype plugin indent on
 set ruler
 set number
 syntax enable
-set guifont=Source\ Code\ Pro\ for\ Powerline:h12
-set background=dark
 colorscheme dracula
 set tabstop=2
 set softtabstop=2
@@ -59,6 +62,9 @@ autocmd InsertEnter,InsertLeave * set nocul!
 let g:netrw_banner=0
 let g:netrw_liststyle=3
 let g:netrw_list_hide='.*\.swp$,\~$,\.orig$'
+let g:NERDTreeShowHidden=1
+
+" workaround for the jumping cmd menu in macvim, described here https://github.com/preservim/nerdtree/issues/1321#issuecomment-1234980190
 inoremap <C-c> <Esc><Esc>
 fun! <SID>StripTrailingWhitespaces()
   let l = line(".")
@@ -69,7 +75,6 @@ endfun
 autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 :autocmd BufNewFile *.html 0r ~/.vim/templates/html.tpl
 
-let NERDTreeShowHidden=1
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists('s:std_in') |
     \ execute 'NERDTree' argv()[0] | wincmd p | enew | execute 'cd '.argv()[0] | endif
