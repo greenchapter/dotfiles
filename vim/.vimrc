@@ -65,7 +65,6 @@ let g:netrw_list_hide='.*\.swp$,\~$,\.orig$'
 let g:NERDTreeShowHidden=1
 
 " workaround for the jumping cmd menu in macvim, described here https://github.com/preservim/nerdtree/issues/1321#issuecomment-1234980190
-let g:NERDTreeMinimalMenu=1
 inoremap <C-c> <Esc><Esc>
 fun! <SID>StripTrailingWhitespaces()
   let l = line(".")
