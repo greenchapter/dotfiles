@@ -74,3 +74,6 @@ else
 fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+export PNPM_HOME="/Users/thomas/Library/pnpm"
+export PATH="$PNPM_HOME:$PATH"
