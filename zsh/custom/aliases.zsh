@@ -37,5 +37,5 @@ alias py="python3"
 alias gdk="git difftool"
 
 # Kubernetes
-export do='--dry-run=client -o yaml' # This way you can just run k run pod --image=nginx $do.
-export now="--force --grace-period O" # This way you can run k delete pod $now
+export yaml='--dry-run=client -o yaml' # This way you can just run k run pod --image=nginx ${=yaml}.
+export now="--force --grace-period O" # This way you can run k delete pod ${=now}.
