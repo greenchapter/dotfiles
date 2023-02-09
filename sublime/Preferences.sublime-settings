@@ -39,7 +39,7 @@
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
 	"hot_exit": false,
-	"ignored_packages": ["JavaScript", "Markdown",
+	"ignored_packages": ["JavaScript",
 	],
 	"line_padding_bottom": 1.8,
 	"line_padding_top": 1.8,
