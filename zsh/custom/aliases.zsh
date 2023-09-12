@@ -31,8 +31,8 @@ alias edit='"$EDITOR" $(preview)'
 alias top="htop"
 alias l="ls -lahF"
 alias ll="ls -F"
-alias le="exa -lga --git"
-alias lle="exa -Ta"
+alias le="eza -lga --git"
+alias lle="eza -Ta"
 alias py="python3"
 alias gdk="git difftool"
 
