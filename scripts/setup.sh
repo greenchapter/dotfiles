@@ -6,13 +6,32 @@
 # Based on Gerald baeck Bootstrap Script
 # - https://github.com/geraldbaeck/dotfiles/blob/master/osx_scripts/osx_bootstrap.sh
 
-echo "\n\n     Start bootstrapping your new mac.\n"
-echo -n "       .----.\n"
-echo -n "       |\033[1m>_\033[0m  |\n"
-echo -n "     __|____|__\n"
-echo -n "    |  ______--|\n"
-echo -n "     -/.::::.\-\n"
-echo -n "      -------- \n\n"
+# git config --global --add difftool.prompt false
+# git config --global diff.tool opendiff
+
+
+
+#
+#
+echo "\n\n     Start bootstrapping your new mac...\n"
+echo -n "        _     _    __ _ _\n"
+echo -n "     __| |___| |_ / _(_) |___ ___\n"
+echo -n "    / _\` / _ \  _|  _| | / -_|_-<\n"
+echo -n "    \__,_\___/\__|_| |_|_\___/__/\n"
+# echo -n "                 \`              /\n"
+echo -n "           ▄▄▌ ▐ ▄▌▪  ·▄▄▄▄• ▄▄▄· ▄▄▄  ·▄▄▄▄\n"
+echo -n "           ██· █▌▐███ ▪▀·.█▌▐█ ▀█ ▀▄ █·██▪ ██\n"
+echo -n "           ██▪▐█▐▐▌▐█·▄█▀▀▀•▄█▀▀█ ▐▀▀▄ ▐█· ▐█▌\n"
+echo -n "           ▐█▌██▐█▌▐█▌█▌▪▄█▀▐█ ▪▐▌▐█•█▌██. ██\n"
+echo -n "            ▀▀▀▀ ▀▪▀▀▀·▀▀▀ • ▀  ▀ .▀  ▀▀▀▀▀▀•\n\n\n"
+
+
+# echo -n "       .----.\n"
+# echo -n "       |\033[1m>_\033[0m  |\n"
+# echo -n "     __|____|__\n"
+# echo -n "    |  ______--|\n"
+# echo -n "     -/.::::.\-\n"
+# echo -n "      -------- \n\n"
 
 echo -n "     This setup is as simple as described here:\n"
 echo -n "     \033[1mhttps://www.youtube.com/watch?v=SGzkUgTgpa4\033[0m\n\n\n"
