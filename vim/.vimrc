@@ -6,11 +6,12 @@ set ttimeout
 set ttimeoutlen=50
 set timeoutlen=3000
 
-set rtp+=~/.vim/bundle/Vundle.vim
 set rtp+=/usr/local/opt/fzf
 set guioptions=
 set backspace=indent,eol,start
+" let g:clear_background=0
 
+" let s:bg        = ['#282000', 236]
 
 call plug#begin()
 
@@ -31,6 +32,13 @@ Plug 'tpope/vim-fugitive'
 call plug#end()
 
 filetype plugin indent on
+
+" https://github.com/dracula/vim/issues/96#issuecomment-402274366
+"
+let g:dracula_colorterm = 0
+" https://github.com/dracula/vim/issues/96#issuecomment-402274758
+let g:dracula_italic = 0
+
 
 set ruler
 set number
@@ -78,3 +86,17 @@ autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists('s:std_in') |
     \ execute 'NERDTree' argv()[0] | wincmd p | enew | execute 'cd '.argv()[0] | endif
+
+
+if has("gui_running")
+  "syntax on
+  "set hlsearch
+  "colorscheme macvim
+  "set bs=2
+  "set ai
+  " set ruler
+  " let g:dracula_colorterm = 0
+
+  set background=light
+  colorscheme dracula
+endif
