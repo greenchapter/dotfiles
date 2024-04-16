@@ -34,6 +34,11 @@ export MANPATH="/usr/local/man:$MANPATH"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 plugins=(history-substring-search git sublime vscode git-extras nvm extract last-working-dir npm docker encode64 zsh-autosuggestions zsh-fzf-history-search kubectl)
 
+
+# Workaround to keep the git prompt plugin working
+# https://github.com/ohmyzsh/ohmyzsh/issues/12328
+zstyle ':omz:alpha:lib:git' async-prompt no
+
 source $ZSH/oh-my-zsh.sh
 
 for file in "$SUPERCHARGED"/zsh/custom/*.zsh; do
