@@ -28,7 +28,6 @@ COMPLETION_WAITING_DOTS="true"
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH="/opt/homebrew/bin:$PATH"
 export PATH="/opt/homebrew/sbin:$PATH"
-export PATH="/opt/homebrew/sbin:$PATH"
 export MANPATH="/usr/local/man:$MANPATH"
 
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
