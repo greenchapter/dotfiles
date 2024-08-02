@@ -2,6 +2,11 @@ set nocompatible
 set encoding=utf-8 nobomb
 filetype off
 
+
+let g:copilot_node_command = "/opt/homebrew/bin/node"
+
+
+
 set ttimeout
 set ttimeoutlen=50
 set timeoutlen=3000
