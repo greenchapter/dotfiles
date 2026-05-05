@@ -1,20 +1,18 @@
 set nocompatible
 set encoding=utf-8 nobomb
 filetype off
-
 set ttimeout
 set ttimeoutlen=50
 set timeoutlen=3000
-
+let g:copilot_node_command = "/opt/homebrew/bin/node"
 set rtp+=/usr/local/opt/fzf
 set guioptions=
 set backspace=indent,eol,start
 " let g:clear_background=0
-
 " let s:bg        = ['#282000', 236]
 
 call plug#begin()
-
+Plug 'sbdchd/neoformat'
 Plug 'dracula/vim'
 Plug 'othree/yajs.vim'
 Plug 'othree/html5.vim'
@@ -28,6 +26,10 @@ Plug 'airblade/vim-gitgutter'
 Plug 'vim-syntastic/syntastic'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tpope/vim-fugitive'
+Plug 'github/copilot.vim'
+Plug 'othree/html5.vim'
+Plug 'pangloss/vim-javascript'
+Plug 'evanleck/vim-svelte', {'branch': 'main'}
 
 call plug#end()
 
