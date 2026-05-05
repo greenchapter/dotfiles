@@ -24,6 +24,17 @@ CASE_SENSITIVE="true"
 # Uncomment following line if you want red dots to be displayed while waiting for completion
 COMPLETION_WAITING_DOTS="true"
 
+# ZSH_THEME_VIRTUALENV_PREFIX=''
+# ZSH_THEME_VIRTUALENV_SUFFIX=''
+export VIRTUAL_ENV_DISABLE_PROMPT=1
+
+function get_venv_name {
+    if [[ -n "$VIRTUAL_ENV" ]]; then
+        # Nimmt den Pfad aus $VIRTUAL_ENV und gibt nur den letzten Teil aus
+        echo "(${VIRTUAL_ENV:t}) "
+    fi
+}
+
 # Then, source plugins and add commands to $PATH
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH="/opt/homebrew/bin:$PATH"
@@ -32,8 +43,7 @@ export PATH="/opt/homebrew/sbin:$PATH"
 export MANPATH="/usr/local/man:$MANPATH"
 
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-plugins=(history-substring-search git sublime vscode git-extras nvm extract last-working-dir npm docker encode64 zsh-autosuggestions zsh-fzf-history-search kubectl)
-
+plugins=(history-substring-search git sublime vscode git-extras nvm extract last-working-dir npm docker encode64 zsh-autosuggestions zsh-fzf-history-search kubectl virtualenv)
 
 # Workaround to keep the git prompt plugin working
 # https://github.com/ohmyzsh/ohmyzsh/issues/12328
@@ -65,7 +75,7 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 # Add Visual Studio Code to the prompt
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 
-export PS1='%{$fg_bold[green]%} %{$reset_color%} $(nvm_prompt_version)%{$fg_bold[blue]%}%2~%{$reset_color%} $(my_git_prompt_info)%{$reset_color%}%B»%b '
+export PS1=' %{$fg_bold[green]%}$(get_venv_name)%{$reset_color%}$(nvm_prompt_version)%{$fg_bold[blue]%}%2~%{$reset_color%} $(my_git_prompt_info)%{$reset_color%}%B»%b '
 
 fpath=(/usr/local/share/zsh-completions $fpath)
 
