@@ -20,7 +20,7 @@
 
 [user]
 	name = Thomas Ott
-	email = thomas.ott@greenchapter.de
+	email = 693276+greenchapter@users.noreply.github.com
 
 [filter "lfs"]
 	clean = git-lfs clean -- %f
